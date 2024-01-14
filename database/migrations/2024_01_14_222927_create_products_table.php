@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('present_price');
             $table->longText('product_details');
             $table->string('category');
+            $table->string('image_path');
             $table->timestamps();
         });
     }

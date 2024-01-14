@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('product_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('products_id');
+            $table->longText('product_description');
             $table->timestamps();
         });
     }
