@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -12,7 +13,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('/dashboard/product-lists');
+        return view('/dashboard/product-lists', [
+            'products' => Product::all()
+        ]);
     }
 
     /**
@@ -28,8 +31,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->hasFile('image'));
-        // $request->file('image')->store('productImage', 'public');
+        $formInputs = $request->validate([
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'discount' => 'numeric',
+            'category' => 'required',
+            'description' => 'required',
+            'qty' => 'required|numeric'
+        ]);
+
+
+        if ($request->hasFile('image')) {
+            $filePath = $request->file('image')->store('productImage', 'public');
+            $formInputs['image_path'] = $filePath;
+        }
+
+        Product::create($formInputs);
+        return redirect('/product/lists')->with('message', 'created successfully');
     }
 
     /**
@@ -61,6 +79,6 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        dd(Product::find($id));
     }
 }

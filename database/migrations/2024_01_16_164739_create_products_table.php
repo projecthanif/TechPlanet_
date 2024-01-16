@@ -18,8 +18,9 @@ return new class extends Migration
             $table->integer('discount');
             $table->string('category');
             $table->string('image_path');
-            $table->boolean('availability');
+            $table->boolean('availability')->default(1);
             $table->longText('description');
+            $table->integer('qty');
             $table->timestamps();
         });
     }

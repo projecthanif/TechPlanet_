@@ -29,10 +29,11 @@ Route::get('/dashboard', function () {
 Route::get('product/lists', [ProductController::class, 'index']);
 Route::get('product/create', [ProductController::class, 'create']);
 Route::post('product/create', [ProductController::class, 'store']);
+Route::delete('product/delete/{id}', [ProductController::class, 'destroy']);
 // Route::view('/product/create', '/dashboard/product-create');
 
 
 // Route::view('/customer/lists', '/dashboard/customer-list');
 Route::view('/order/lists', '/dashboard/order-lists');
 Route::view('/product/category', '/dashboard/product-category');
-Route::view('/product/lists', '/dashboard/product-lists');
+// Route::view('/product/lists', '/dashboard/product-lists');

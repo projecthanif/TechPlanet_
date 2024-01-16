@@ -248,7 +248,7 @@
                                             placeholder="Search Product" />
                                     </div>
                                     <div class="mt-2">
-                                        <a href=".//product/create">
+                                        <a href="/product/create">
                                             <button type="submit" class="btn btn-primary me-2">
                                                 Add Product
                                             </button>
@@ -270,162 +270,11 @@
                                             </tr>
                                         </thead>
                                         <tbody class="table-border-bottom-0">
-                                            <tr>
-                                                <td class="d-flex align-items-center">
-                                                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                                        data-bs-placement="top"
-                                                        class="avatar avatar-xs pull-up list-unstyled"
-                                                        title="Lilian Fuller">
-                                                        <img src="../assets/img/avatars/5.png" alt="Avatar"
-                                                            class="rounded" />
-                                                    </li>
-                                                    <strong class="mx-3">Angular Project</strong>
-                                                </td>
-                                                <td>Albert Cook</td>
-                                                <td>
-                                                    <div class="form-check form-switch mb-2">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="flexSwitchCheckChecked" />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-label-primary me-1">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button type="button"
-                                                            class="btn p-0 dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-edit-alt me-1"></i>
-                                                                Edit</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-trash me-1"></i>
-                                                                Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="d-flex align-items-center">
-                                                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                                        data-bs-placement="top"
-                                                        class="avatar avatar-xs pull-up list-unstyled"
-                                                        title="Lilian Fuller">
-                                                        <img src="../assets/img/avatars/5.png" alt="Avatar"
-                                                            class="rounded" />
-                                                    </li>
-                                                    <strong class="mx-3">Angular Project</strong>
-                                                </td>
-                                                <td>Albert Cook</td>
-                                                <td>
-                                                    <div class="form-check form-switch mb-2">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="flexSwitchCheckChecked" />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-label-primary me-1">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button type="button"
-                                                            class="btn p-0 dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-edit-alt me-1"></i>
-                                                                Edit</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-trash me-1"></i>
-                                                                Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="d-flex align-items-center">
-                                                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                                        data-bs-placement="top"
-                                                        class="avatar avatar-xs pull-up list-unstyled"
-                                                        title="Lilian Fuller">
-                                                        <img src="../assets/img/avatars/5.png" alt="Avatar"
-                                                            class="rounded" />
-                                                    </li>
-                                                    <strong class="mx-3">Angular Project</strong>
-                                                </td>
-                                                <td>Albert Cook</td>
-                                                <td>
-                                                    <div class="form-check form-switch mb-2">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="flexSwitchCheckChecked" />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-label-primary me-1">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button type="button"
-                                                            class="btn p-0 dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-edit-alt me-1"></i>
-                                                                Edit</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-trash me-1"></i>
-                                                                Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="d-flex align-items-center">
-                                                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                                        data-bs-placement="top"
-                                                        class="avatar avatar-xs pull-up list-unstyled"
-                                                        title="Lilian Fuller">
-                                                        <img src="../assets/img/avatars/5.png" alt="Avatar"
-                                                            class="rounded" />
-                                                    </li>
-                                                    <strong class="mx-3">Angular Project</strong>
-                                                </td>
-                                                <td>Albert Cook</td>
-                                                <td>
-                                                    <div class="form-check form-switch mb-2">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="flexSwitchCheckChecked" />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-label-primary me-1">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button type="button"
-                                                            class="btn p-0 dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-edit-alt me-1"></i>
-                                                                Edit</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-trash me-1"></i>
-                                                                Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            @unless (count($products) == 0)
+                                                @foreach ($products as $product)
+                                                    <x-listing-row :product="$product" />
+                                                @endforeach
+                                            @endunless
                                         </tbody>
                                     </table>
                                 </div>
