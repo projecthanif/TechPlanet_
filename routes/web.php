@@ -18,4 +18,14 @@ use App\Http\Controllers\ProductController;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/', [ProductController::class, 'get']);
+
+
+Route::get('/dashboard', function () {
+    return view('/dashboard/index');
+});
+
+Route::view('/customer/lists', '/dashboard/customer-list');
+Route::view('/order/lists', '/dashboard/order-lists');
+Route::view('/product/category', '/dashboard/product-category');
+Route::view('/product/lists', '/dashboard/product-lists');
+Route::view('/product/create', '/dashboard/product-create');
