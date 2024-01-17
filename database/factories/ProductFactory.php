@@ -14,7 +14,6 @@ class ProductFactory extends Factory
      *
      * @return array<string, mixed>
      */
-
     //  $table->string('name');
     //  $table->integer('price');
     //  $table->integer('discount');

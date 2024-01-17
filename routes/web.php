@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
@@ -30,10 +32,14 @@ Route::get('product/lists', [ProductController::class, 'index']);
 Route::get('product/create', [ProductController::class, 'create']);
 Route::post('product/create', [ProductController::class, 'store']);
 Route::delete('product/delete/{id}', [ProductController::class, 'destroy']);
+
 // Route::view('/product/create', '/dashboard/product-create');
 
+//Category
+Route::get('/product/category', [CategoryController::class, 'index']);
+Route::post('/product/category/create', [CategoryController::class, 'store']);
 
 // Route::view('/customer/lists', '/dashboard/customer-list');
 Route::view('/order/lists', '/dashboard/order-lists');
-Route::view('/product/category', '/dashboard/product-category');
+// Route::view('/product/category', '/dashboard/product-category');
 // Route::view('/product/lists', '/dashboard/product-lists');

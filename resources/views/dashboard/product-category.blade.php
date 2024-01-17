@@ -127,34 +127,35 @@
                                     <div class="mt-3">
                                         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
                                             data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">
-                                            Toggle End
+                                            Create Category
                                         </button>
                                         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd"
                                             aria-labelledby="offcanvasEndLabel">
                                             <div class="offcanvas-header">
                                                 <h5 id="offcanvasEndLabel" class="offcanvas-title">
-                                                    Offcanvas End
+                                                    Category Name
                                                 </h5>
                                                 <button type="button" class="btn-close text-reset"
                                                     data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                             </div>
                                             <div class="offcanvas-body my-auto mx-0 flex-grow-0">
-                                                <p class="text-center">
-                                                    Lorem ipsum, or lipsum as it is sometimes known,
-                                                    is dummy text used in laying out print, graphic
-                                                    or web designs. The passage is attributed to an
-                                                    unknown typesetter in the 15th century who is
-                                                    thought to have scrambled parts of Cicero's De
-                                                    Finibus Bonorum et Malorum for use in a type
-                                                    specimen book.
-                                                </p>
-                                                <button type="button" class="btn btn-primary mb-2 d-grid w-100">
-                                                    Continue
-                                                </button>
-                                                <button type="button" class="btn btn-outline-secondary d-grid w-100"
-                                                    data-bs-dismiss="offcanvas">
-                                                    Cancel
-                                                </button>
+                                                <form action="/product/category/create" method="post">
+                                                    @csrf
+                                                    @method('POST')
+                                                    <div class="mb-3 col-md-8 w-100">
+                                                        <label for="" class="form-label">Category Name</label>
+                                                        <input class="form-control" type="text" id="firstName"
+                                                            name="name" placeholder="Product title" />
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary mb-2 d-grid w-100">
+                                                        Continue
+                                                    </button>
+                                                    <button type="button"
+                                                        class="btn btn-outline-secondary d-grid w-100"
+                                                        data-bs-dismiss="offcanvas">
+                                                        Cancel
+                                                    </button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -173,30 +174,9 @@
                                             </tr>
                                         </thead>
                                         <tbody class="table-border-bottom-0">
-                                            <tr>
-                                                <td class="d-flex align-items-center">
-                                                    <strong class="mx-3">Angular Project</strong>
-                                                </td>
-                                                <td>Albert Cook</td>
-                                                <td>$2000</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button type="button"
-                                                            class="btn p-0 dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-edit-alt me-1"></i>
-                                                                Edit</a>
-                                                            <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                    class="bx bx-trash me-1"></i>
-                                                                Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            @foreach ($categories as $category)
+                                                <x-category-list :category="$category" />
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

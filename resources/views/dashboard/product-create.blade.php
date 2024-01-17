@@ -165,8 +165,10 @@
                                             <label class="form-label" for="country">Category</label>
                                             <select id="country" class="select2 form-select" name="category">
                                                 <option value="">Select</option>
-                                                <option value="Australia">Australia</option>
-                                                <option value="Bangladesh">Bangladesh</option>
+                                                @foreach ($categories as $category)
+                                                    <x-category-option :category="$category" />
+                                                    </option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         @error('category')

@@ -27,14 +27,14 @@
                 <i class="bx bx-dots-vertical-rounded"></i>
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
-                    Edit</a>
+                <form action="#">
+                    <button class="dropdown-item"><i class="bx bx-edit-alt me-1"></i>
+                        Edit</button>
+                </form>
                 <form action="/product/delete/{{ $product['id'] }}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="dropdown-item" href="/product/delete/{{ $product['id'] }}"><i
-                            class="bx bx-trash me-1"></i>
-                        Delete</button>
+                    <button class="dropdown-item"><i class="bx bx-trash me-1"></i>Delete</button>
                 </form>
             </div>
         </div>
