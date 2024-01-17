@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -33,13 +34,14 @@ Route::get('product/create', [ProductController::class, 'create']);
 Route::post('product/create', [ProductController::class, 'store']);
 Route::delete('product/delete/{id}', [ProductController::class, 'destroy']);
 
-// Route::view('/product/create', '/dashboard/product-create');
 
 //Category
 Route::get('/product/category', [CategoryController::class, 'index']);
 Route::post('/product/category/create', [CategoryController::class, 'store']);
+// Route::patch('/product/category/edit', [CategoryController::class, 'edit']);
+// Route::delete('/product/category/edit', [CategoryController::class, 'destroy']);
 
-// Route::view('/customer/lists', '/dashboard/customer-list');
-Route::view('/order/lists', '/dashboard/order-lists');
-// Route::view('/product/category', '/dashboard/product-category');
-// Route::view('/product/lists', '/dashboard/product-lists');
+
+//Order
+Route::get('/order/lists', [OrderController::class, 'index']);
+// Route::get('/order/list/{id}', [OrderController::class, 'show']);

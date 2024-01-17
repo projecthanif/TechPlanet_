@@ -13,7 +13,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        // dd();
+        return view('/dashboard/order-lists');
     }
 
     /**
