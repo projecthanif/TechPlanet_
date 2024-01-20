@@ -7,7 +7,7 @@
 <tr>
     <td class="d-flex align-items-center">
         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
-            class="avatar avatar-xs pull-up list-unstyled" title="Lilian Fuller">
+            class="avatar avatar-xs pull-up list-unstyled" title="{{ $product['name'] }}">
             <img src="/storage/{{ $product['image_path'] }}" alt="Avatar" class="rounded" />
         </li>
         <strong class="mx-3">{{ $product['name'] }}</strong>
@@ -27,7 +27,9 @@
                 <i class="bx bx-dots-vertical-rounded"></i>
             </button>
             <div class="dropdown-menu">
-                <form action="#">
+                <form action="/product/edit/{{ $product['id'] }}" method="post">
+                    @csrf
+                    @method('patch')
                     <button class="dropdown-item"><i class="bx bx-edit-alt me-1"></i>
                         Edit</button>
                 </form>

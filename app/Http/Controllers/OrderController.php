@@ -14,7 +14,10 @@ class OrderController extends Controller
     public function index()
     {
         // dd();
-        return view('/dashboard/order-lists');
+        return view('/dashboard/order-lists', [
+            'nav' => 'order',
+            'list' => 'list',
+        ]);
     }
 
     /**

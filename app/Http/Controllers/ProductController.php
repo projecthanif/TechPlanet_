@@ -17,6 +17,8 @@ class ProductController extends Controller
     {
         return view('/dashboard/product-lists', [
             'products' => Product::all(),
+            'nav' => 'product',
+            'list' => 'list',
         ]);
     }
 
@@ -27,6 +29,8 @@ class ProductController extends Controller
     {
         return view('/dashboard/product-create', [
             'categories' => Category::all(),
+            'nav' => 'product',
+            'list' => 'add' //change to create
         ]);
     }
 
@@ -40,6 +44,8 @@ class ProductController extends Controller
         if ($request->hasFile('image')) {
             $validated['image_path'] = $request->file('image')->store('productImage', 'public');
         }
+
+        $validated['product_id'] = uuid_create();
 
         Product::create($validated);
 
@@ -57,9 +63,9 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Product $product)
+    public function edit(Product $product, $product_id)
     {
-        //
+        dd($product, $product_id);
     }
 
     /**
@@ -73,9 +79,9 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product, $id)
+    public function destroy(Product $product, $product_id)
     {
-        $item = $product::find($id);
+        $item = $product::find($product_id);
         if ($item->image_path && Storage::disk('public')->exists($item->image_path)) {
             Storage::disk('public')->delete($item->image_path);
         }

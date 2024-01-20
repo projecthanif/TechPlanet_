@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             UserSeeder::class,
             OrderSeeder::class,
+            CustomerSeeder::class,
         ]);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

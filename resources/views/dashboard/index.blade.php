@@ -1,106 +1,7 @@
 <x-layout>
     <!-- Menu -->
 
-    <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-        <div class="app-brand demo">
-            <a href="/dashboard" class="app-brand-link">
-                <span class="app-brand-text fs-4 menu-text fw-bolder ms-2">Tech<span
-                        class="text-danger">Panet</span></span>
-            </a>
-
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-                <i class="bx bx-chevron-left bx-sm align-middle"></i>
-            </a>
-        </div>
-
-        <div class="menu-inner-shadow"></div>
-
-        <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item active">
-                <a href="/dashboard" class="menu-link">
-                    <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                    <div data-i18n="Analytics">Dashboard</div>
-                </a>
-            </li>
-
-            <li class="menu-header small text-uppercase">
-                <span class="menu-header-text">Pages</span>
-            </li>
-            <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                    <div data-i18n="Account Settings">Products</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a href="/product/lists" class="menu-link">
-                            <div data-i18n="Account">Product List</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="/product/create" class="menu-link">
-                            <div data-i18n="Notifications">Add Product</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="/product/category" class="menu-link">
-                            <div data-i18n="Connections">Category List</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                    <div data-i18n="Account Settings">Order</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a href="/order/lists" class="menu-link">
-                            <div data-i18n="Account">Order List</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                    <div data-i18n="Account Settings">Customer</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a href="/customer/lists" class="menu-link">
-                            <div data-i18n="Account">Customer List</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                    <div data-i18n="Authentications">Authentications</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                            <div data-i18n="Basic">Login</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                            <div data-i18n="Basic">Register</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                            <div data-i18n="Basic">Forgot Password</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </aside>
+    <x-nav :nav="$nav" />
     <!-- / Menu -->
 
     <!-- Layout container -->
@@ -221,8 +122,8 @@
                                 </div>
                                 <div class="col-sm-5 text-center text-sm-left">
                                     <div class="card-body pb-0 px-0 px-md-4">
-                                        <img src="../assets/img/illustrations/man-with-laptop-light.png"
-                                            height="140" alt="View Badge User"
+                                        <img src="../assets/img/illustrations/man-with-laptop-light.png" height="140"
+                                            alt="View Badge User"
                                             data-app-dark-img="illustrations/man-with-laptop-dark.png"
                                             data-app-light-img="illustrations/man-with-laptop-light.png" />
                                     </div>
@@ -246,8 +147,7 @@
                                                     aria-expanded="false">
                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                 </button>
-                                                <div class="dropdown-menu dropdown-menu-end"
-                                                    aria-labelledby="cardOpt3">
+                                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
                                                     <a class="dropdown-item" href="javascript:void(0);">View More</a>
                                                     <a class="dropdown-item" href="javascript:void(0);">Delete</a>
                                                 </div>

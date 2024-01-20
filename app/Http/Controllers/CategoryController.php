@@ -14,7 +14,9 @@ class CategoryController extends Controller
     public function index()
     {
         return view('/dashboard/product-category', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'nav' => 'product',
+            'list' => 'clist'
         ]);
     }
 

@@ -17,9 +17,10 @@ return new class extends Migration
             $table->string('name');
             $table->integer('price');
             $table->integer('discount');
-            $table->foreignid('category');
+            $table->string('category');
+            $table->string('qty');
             $table->string('image_path');
-            $table->string('availability');
+            $table->tinyInteger('availability')->default(1);
             $table->longText('description');
             $table->timestamps();
         });

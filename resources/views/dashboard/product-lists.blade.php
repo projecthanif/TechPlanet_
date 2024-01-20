@@ -1,106 +1,7 @@
 <x-layout>
     <!-- Menu -->
 
-    <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-        <div class="app-brand demo">
-            <a href="/dashboard" class="app-brand-link">
-                <span class="app-brand-text fs-4 menu-text fw-bolder ms-2">Tech<span
-                        class="text-danger">Panet</span></span>
-            </a>
-
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-                <i class="bx bx-chevron-left bx-sm align-middle"></i>
-            </a>
-        </div>
-
-        <div class="menu-inner-shadow"></div>
-
-        <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item">
-                <a href="/dashboard" class="menu-link">
-                    <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                    <div data-i18n="Analytics">Dashboard</div>
-                </a>
-            </li>
-
-            <li class="menu-header small text-uppercase">
-                <span class="menu-header-text">Pages</span>
-            </li>
-            <li class="menu-item active open">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                    <div data-i18n="Account Settings">Product</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item active">
-                        <a href="/product/lists" class="menu-link">
-                            <div data-i18n="Account">Product List</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="/product/create" class="menu-link">
-                            <div data-i18n="Notifications">Add Product</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="/product/category" class="menu-link">
-                            <div data-i18n="Connections">Category List</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                    <div data-i18n="Account Settings">Order</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a href="/order/lists" class="menu-link">
-                            <div data-i18n="Account">Order List</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                    <div data-i18n="Account Settings">Customer</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a href="/customer/lists" class="menu-link">
-                            <div data-i18n="Account">Customer List</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                    <div data-i18n="Authentications">Authentications</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item">
-                        <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                            <div data-i18n="Basic">Login</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                            <div data-i18n="Basic">Register</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                            <div data-i18n="Basic">Forgot Password</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </aside>
+    <x-nav :nav="$nav" :list="$list" />
     <!-- / Menu -->
 
     <!-- Layout container -->
@@ -114,7 +15,7 @@
                     <span class="text-muted fw-light">eCommerce /</span>
                     Product List
                 </h4>
-                
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="col-12 col-md-8 col-lg-12 order-3 order-md-2">
@@ -182,8 +83,8 @@
                                         <div class="card-body">
                                             <div class="card-title d-flex align-items-start justify-content-between">
                                                 <div class="avatar flex-shrink-0">
-                                                    <img src="../assets/img/icons/unicons/paypal.png"
-                                                        alt="Credit Card" class="rounded" />
+                                                    <img src="../assets/img/icons/unicons/paypal.png" alt="Credit Card"
+                                                        class="rounded" />
                                                 </div>
                                                 <div class="dropdown">
                                                     <button class="btn p-0" type="button" id="cardOpt4"
@@ -201,8 +102,7 @@
                                             </div>
                                             <span class="d-block mb-1">Payments</span>
                                             <h3 class="card-title text-nowrap mb-2">$2,456</h3>
-                                            <small class="text-danger fw-semibold"><i
-                                                    class="bx bx-down-arrow-alt"></i>
+                                            <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i>
                                                 -14.82%</small>
                                         </div>
                                     </div>
