@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use App\Policies\BasePolicy;
 
 class CustomerController extends Controller
 {
@@ -15,11 +16,11 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('/dashboard/customer-list', [
+        return BasePolicy::viewAny(view('/dashboard/customer-list', [
             'nav' => 'customer',
             'list' => 'list',
             'users' => User::all()
-        ]);
+        ]));
     }
 
     /**

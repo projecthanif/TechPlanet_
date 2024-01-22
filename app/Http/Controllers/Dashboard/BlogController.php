@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreBlogRequest;
 use App\Http\Requests\Dashboard\UpdateBlogRequest;
+use App\Policies\BasePolicy;
 
 class BlogController extends Controller
 {
@@ -14,11 +15,11 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('/dashboard/blog-list', [
+        return BasePolicy::viewAny(view('/dashboard/blog-list', [
             'products' => [],
             'nav' => 'blog',
             'list' => 'list'
-        ]);
+        ]));
     }
 
     /**

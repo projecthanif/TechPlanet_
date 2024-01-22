@@ -1,5 +1,4 @@
 <x-layout>
-    {{-- <x-nav :nav="$nav" :list="$list" /> --}}
     <div class="flex-grow-1 container-p-y container-fluid">
 
         <h4 class="py-3 mb-4">
@@ -16,7 +15,9 @@
                     Aug 17, 2020, 5:48 (ET)
                 </p>
             </div>
-            <button type="button" class="btn btn-label-danger delete-customer">Delete Customer</button>
+            <form action="#" method="post">
+                <button type="button" class="btn btn-danger ">Delete Customer</button>
+            </form>
         </div>
 
 
@@ -104,21 +105,6 @@
 
             <!-- Customer Content -->
             <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
-                <!-- Customer Pills -->
-                <ul class="nav nav-pills flex-column flex-md-row mb-4">
-                    <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i
-                                class="bx bx-user me-1"></i>Overview</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/ecommerce/customer/details/security"><i
-                                class="bx bx-lock-alt me-1"></i>Security</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/ecommerce/customer/details/billing"><i
-                                class="bx bx-detail me-1"></i>Address &amp; Billing</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/ecommerce/customer/details/notifications"><i
-                                class="bx bx-bell me-1"></i>Notifications</a></li>
-                </ul>
-                <!--/ Customer Pills -->
 
                 <!-- / Customer cards -->
                 <div class="row text-nowrap">

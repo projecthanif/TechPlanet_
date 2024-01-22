@@ -5,39 +5,16 @@ namespace App\Http\Controllers\Dashboard;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Policies\BasePolicy;
 
 class ProfileController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        return view('/dashboard/customer-profile', []);
-    }
-
-    // /**
-    //  * Show the form for creating a new resource.
-    //  */
-    // public function create()
-    // {
-    //     //
-    // }
-
-    // /**
-    //  * Store a newly created resource in storage.
-    //  */
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
-
-    /**
      * Display the specified resource.
      */
-    public function show(User $user)
+    public function show(User $user, $id)
     {
-        //
+        return BasePolicy::viewAny(view('/dashboard/user-profile'));
     }
 
     /**

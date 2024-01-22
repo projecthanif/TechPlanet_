@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Dashboard\StoreProductRequest;
 use App\Http\Requests\Dashboard\UpdateProductRequest;
+use App\Policies\BasePolicy;
 
 class ProductController extends Controller
 {
@@ -16,11 +17,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('/dashboard/product-lists', [
+        return BasePolicy::viewAny(view('/dashboard/product-lists', [
             'products' => Product::all(),
             'nav' => 'product',
             'list' => 'list',
-        ]);
+        ]));
     }
 
     /**

@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreCategoryRequest;
 use App\Http\Requests\Dashboard\UpdateCategoryRequest;
+use App\Policies\BasePolicy;
 
 class CategoryController extends Controller
 {
@@ -14,11 +15,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('/dashboard/product-category', [
+        return BasePolicy::viewAny(view('/dashboard/product-category', [
             'categories' => Category::all(),
             'nav' => 'product',
             'list' => 'clist'
-        ]);
+        ]));
     }
 
     /**

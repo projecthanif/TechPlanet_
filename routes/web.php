@@ -81,7 +81,7 @@ Route::get('/order/lists', [OrderController::class, 'index']);
 //Customer
 Route::get('/customer/lists', [CustomerController::class, 'index']);
 //User Profile
-Route::get('/customer/profile', [ProfileController::class, 'index']);
+Route::get('/customer/profile/{user_id}', [ProfileController::class, 'show']);
 
 //BLOG
 Route::get('/blog/list', [BlogController::class, 'index']);
@@ -89,4 +89,3 @@ Route::get('/blog/create', [BlogController::class, 'create']);
 Route::post('/blog/create', [BlogController::class, 'store']);
 Route::patch('/blog/edit/{id}', [BlogController::class, 'edit']);
 Route::delete('/blog/delete/{id}', [BlogController::class, 'destroy']);
-
