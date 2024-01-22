@@ -72,6 +72,11 @@
                         <div data-i18n="Account">Customer List</div>
                     </a>
                 </li>
+                {{-- <li class="menu-item {{ $nav == 'customer' && $list == 'index' ? 'active' : '' }}">
+                    <a href="/customer/lists" class="menu-link">
+                        <div data-i18n="Account">Customer List</div>
+                    </a>
+                </li> --}}
             </ul>
         </li>
         <li class="menu-item {{ $nav == 'blog' ? 'active open' : '' }}">
