@@ -8,7 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Shopcontroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +37,10 @@ Route::view('/contact', 'frontend/contact');
 
 /** Users Authentication */
 
-Route::get('/auth/login', [UserController::class, 'index']);
-Route::post('/auth/login', [UserController::class, 'login']);
-Route::get('/auth/register', [UserController::class, 'create']);
-Route::post('/auth/register', [UserController::class, 'store']);
+Route::get('/auth/login', [LoginController::class, 'index']);
+Route::post('/auth/login', [LoginController::class, 'authenticate']);
+// Route::get('/auth/register', [UserController::class, 'create']);
+// Route::post('/auth/register', [UserController::class, 'store']);
 
 
 
