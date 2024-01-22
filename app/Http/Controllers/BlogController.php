@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Http\Requests\StoreBlogRequest;
-use App\Http\Requests\UpdateBlogRequest;
+use App\Http\Requests\Dashboard\StoreBlogRequest;
+use App\Http\Requests\Dashboard\UpdateBlogRequest;
 
 class BlogController extends Controller
 {

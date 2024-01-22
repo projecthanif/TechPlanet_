@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Dashboard;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\BaseFormRequest;
 
-class UpdateCategoryRequest extends BaseFormRequest
+class UpdateProductRequest extends BaseFormRequest
 {
-
     /**
      * Get the validation rules that apply to the request.
      *
