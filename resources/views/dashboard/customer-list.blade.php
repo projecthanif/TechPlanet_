@@ -23,23 +23,19 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>ORDER</th>
-                                                <th>DATE</th>
-                                                <th>CUSTOMER</th>
-                                                <th>PAYMENT STATUS</th>
-                                                <th>METHOD</th>
-                                                <th>ACTIONS</th>
+                                                <th>No. ORDER</th>
+                                                <th>DATE REGISTERED</th>
+                                                <th>CUSTOMER NAME</th>
+                                                <th>CUSTOMER TYPE</th>
+                                                <th>ACTION</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-border-bottom-0">
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
+                                            @unless (count($users) === 0)
+                                                @foreach ($users as $user)
+                                                    <x-customer-list :user="$user" />
+                                                @endforeach
+                                            @endunless
                                         </tbody>
                                     </table>
                                 </div>

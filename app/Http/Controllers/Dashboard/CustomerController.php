@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Models\User;
 use App\Models\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCustomerRequest;
@@ -17,6 +18,7 @@ class CustomerController extends Controller
         return view('/dashboard/customer-list', [
             'nav' => 'customer',
             'list' => 'list',
+            'users' => User::all()
         ]);
     }
 
