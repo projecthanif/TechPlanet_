@@ -9,7 +9,7 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>
-        Register Basic - Pages | TechPanet - Bootstrap 5 HTML Admin Template
+        Register Basic - Pages | TechPlanet - Bootstrap 5 HTML Admin Template
         - Pro
     </title>
 
@@ -107,7 +107,8 @@
                                         </g>
                                     </svg>
                                 </span>
-                                <span class="app-brand-text demo text-body fw-bolder">TechPanet</span>
+                                <span class="app-brand-text fs-3 text-body fw-bolder"><span
+                                        class="Text-danger">Tech</span>Planet</span>
                             </a>
                         </div>
                         <!-- /Logo -->
@@ -116,7 +117,7 @@
                             Make your app management easy and fun!
                         </p>
 
-                        <form id="formAuthentication" class="mb-3" action="/auth/register" method="POST">
+                        <form id="formAuthentication" class="mb-3" action="/register" method="POST">
                             @csrf
                             @method('post')
                             <div class="mb-3">
@@ -167,7 +168,7 @@
 
                         <p class="text-center">
                             <span>Already have an account?</span>
-                            <a href="/auth/login">
+                            <a href="/login">
                                 <span>Sign in instead</span>
                             </a>
                         </p>

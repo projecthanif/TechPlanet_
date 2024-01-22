@@ -9,7 +9,7 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>
-        Forgot Password Basic - Pages | TechPanet - Bootstrap 5 HTML Admin
+        Forgot Password Basic - Pages | TechPlanet - Bootstrap 5 HTML Admin
         Template - Pro
     </title>
 
@@ -107,7 +107,7 @@
                                         </g>
                                     </svg>
                                 </span>
-                                <span class="app-brand-text demo text-body fw-bolder">TechPanet</span>
+                                <span class="app-brand-text demo text-body fw-bolder">TechPlanet</span>
                             </a>
                         </div>
                         <!-- /Logo -->
@@ -142,7 +142,7 @@
     <!-- / Content -->
 
     <div class="buy-now">
-        <a href="https://themeselection.com/products/TechPanet-bootstrap-html-admin-template/" target="_blank"
+        <a href="https://themeselection.com/products/TechPlanet-bootstrap-html-admin-template/" target="_blank"
             class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
     </div>
 

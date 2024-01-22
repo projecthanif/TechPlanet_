@@ -1,14 +1,14 @@
 <?php
 
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\Shopcontroller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Shopcontroller;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Dashboard\BlogController;
+use App\Http\Controllers\Dashboard\ProductController;
+use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +37,10 @@ Route::view('/contact', 'frontend/contact');
 
 /** Users Authentication */
 
-Route::get('/auth/login', [LoginController::class, 'index']);
-Route::post('/auth/login', [LoginController::class, 'authenticate']);
-// Route::get('/auth/register', [UserController::class, 'create']);
-// Route::post('/auth/register', [UserController::class, 'store']);
+Route::get('/login', [AuthController::class, 'index']);
+Route::post('/login', [AuthController::class, 'authenticate']);
+Route::get('/register', [AuthController::class, 'create']);
+Route::post('/register', [AuthController::class, 'store']);
 
 
 

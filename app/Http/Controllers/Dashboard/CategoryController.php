@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Models\Category;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreCategoryRequest;
 use App\Http\Requests\Dashboard\UpdateCategoryRequest;
 

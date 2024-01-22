@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\Dashboard\UpdateProductRequest;
 use App\Http\Requests\Dashboard\StoreProductRequest;
+use App\Http\Requests\Dashboard\UpdateProductRequest;
 
 class ProductController extends Controller
 {
