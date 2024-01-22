@@ -31,9 +31,9 @@ Route::get('/shop', [Shopcontroller::class, 'index']);
 // Route::get('/shop', [Shopcontroller::class, 'index']);
 // Route::post('/shop/create', [Shopcontroller::class, 'store']);
 
-Route::view('/about', 'frontend/about');
-Route::view('/blog', 'frontend/blog');
-Route::view('/contact', 'frontend/contact');
+Route::view('/about', 'frontend/about', ['nav' => 'about']);
+Route::view('/blog', 'frontend/blog', ['nav' => 'blog']);
+Route::view('/contact', 'frontend/contact', ['nav' => 'contact']);
 
 
 /** Users Authentication */

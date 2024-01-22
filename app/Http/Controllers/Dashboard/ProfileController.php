@@ -14,7 +14,10 @@ class ProfileController extends Controller
      */
     public function show(User $user, $id)
     {
-        return BasePolicy::viewAny(view('/dashboard/user-profile'));
+        return view('/dashboard/user-profile', [
+            'user' => User::find($id)
+        ]);
+        // return BasePolicy::viewAny(view('/dashboard/user-profile'));
     }
 
     /**

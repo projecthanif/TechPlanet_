@@ -14,6 +14,7 @@ class HomeController extends Controller
     {
         return view('/frontend/index', [
             'products' => Product::latest()->paginate(8),
+            'nav' => 'home'
         ]);
     }
 }

@@ -15,7 +15,8 @@ class Shopcontroller extends Controller
     {
         return view('frontend/shop', [
             'products' => Product::latest()->paginate(12),
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'nav' => 'shop'
         ]);
     }
 
