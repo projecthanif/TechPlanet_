@@ -51,10 +51,10 @@
     <main>
         <section class="carousel">
             <div class="left-img">
-                <img src="assets/image/images__4_-removebg-preview.png" alt="" class="carousel-img" />
+                <img src="/storage/{{ $product->image_path }}" alt="" class="carousel-img" />
             </div>
             <div class="right-descp">
-                <h1 class="title">HP Elitebook X360 G2</h1>
+                <h1 class="title">{{ $product->name }}</h1>
                 <div class="rating">
                     <div class="stars">
                         <i class="fa fa-star"></i>
@@ -66,8 +66,10 @@
                     <h3 class="customer-review">(1 Customer review)</h3>
                 </div>
                 <div class="price">
-                    <h4 class="old-price">$1,800</h4>
-                    <h2 class="new-price">$1,200</h2>
+                    @isset($product->old_price)
+                        <h4 class="old-price">$1,800</h4>
+                    @endisset
+                    <h2 class="new-price">${{ $product->price }}</h2>
                 </div>
                 <p class="descp">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
@@ -79,7 +81,7 @@
                     assumenda tempora sapiente?
                 </p>
                 <button class="dp-btn">Add to cart</button>
-                <p class="type">Category: <span class="red">Laptop</span></p>
+                <p class="type">Category: <span class="red">{{ $product->category }}</span></p>
             </div>
         </section>
         <section class="tabs">

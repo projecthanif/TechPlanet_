@@ -13,7 +13,7 @@ class Shopcontroller extends Controller
      */
     public function index()
     {
-        return view('frontend/shop', [
+        return view('frontend.shop', [
             'products' => Product::latest()->paginate(12),
             'categories' => Category::all(),
             'nav' => 'shop'
@@ -39,9 +39,12 @@ class Shopcontroller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(Product $product, $product_id)
     {
-        //
+        return view('frontend.product-details', [
+            'product' => Product::find($product_id),
+            // 'similar' => Product::all()->where('category', )
+        ]);
     }
 
     /**
