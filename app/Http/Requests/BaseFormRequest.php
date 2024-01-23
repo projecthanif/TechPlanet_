@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
 class BaseFormRequest extends FormRequest
@@ -11,6 +12,6 @@ class BaseFormRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return (Auth::check() && auth()->user()->user_type == 'admin');
     }
 }
