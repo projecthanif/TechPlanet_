@@ -10,6 +10,7 @@ use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\CustomerController;
 use App\Http\Controllers\Dashboard\ProfileController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +39,9 @@ Route::view('/contact', 'frontend/contact', ['nav' => 'contact']);
 
 /** Users Authentication */
 
-Route::get('/login', [AuthController::class, 'index']);
+Route::get('/login', [AuthController::class, 'index'])->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticate']);
-Route::get('/register', [AuthController::class, 'create']);
+Route::get('/register', [AuthController::class, 'create'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'store']);
 
 
@@ -53,11 +54,7 @@ Route::post('/register', [AuthController::class, 'store']);
 /**  Dashboard */
 
 //DASHBOARD INDEX PAGE
-Route::get('/dashboard', function () {
-    return view('/dashboard/index', [
-        'nav' => 'dashboard',
-    ]);
-});
+Route::get('/dashboard', [IndexController::class, 'index']);
 
 
 
