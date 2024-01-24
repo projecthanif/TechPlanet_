@@ -30,7 +30,7 @@
         <a href="/login" class="link-s">
             <i class="fa fa-search"></i>
         </a>
-        <a href="cart.html" class="link-s">
+        <a href="/cart" class="link-s">
             <i class="fa fa-shopping-cart"></i>
         </a>
         <button class="nav-toggle">

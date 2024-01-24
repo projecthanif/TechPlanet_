@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Shopcontroller;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\Dashboard\BlogController;
 use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\CategoryController;
@@ -30,12 +31,13 @@ Route::get('/', [HomeController::class, 'index']);
 //SHOP
 Route::get('/shop', [Shopcontroller::class, 'index']);
 Route::get('/shop/{product_id}', [Shopcontroller::class, 'show']);
-// Route::post('/shop', [Shopcontroller::class, 'index']);
-// Route::post('/shop/create', [Shopcontroller::class, 'store']);
+Route::post('/shop/{product_id}', [Shopcontroller::class, 'store']);
 
 Route::view('/about', 'frontend/about', ['nav' => 'about']);
 Route::view('/blog', 'frontend/blog', ['nav' => 'blog']);
 Route::view('/contact', 'frontend/contact', ['nav' => 'contact']);
+
+Route::get('/cart', [CartController::class, 'index']);
 
 
 /** Users Authentication */

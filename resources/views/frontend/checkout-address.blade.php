@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="{{ asset('/front/assets/image/64-bit.png') }}" type="image/x-icon">
     <title>TechPlanet</title>
 </head>
 
@@ -41,7 +42,7 @@
             <a href="" class="link-s">
                 <i class="fa fa-search"></i>
             </a>
-            <a href="cart.html" class="link-s">
+            <a href="/cart" class="link-s">
                 <i class="fa fa-shopping-cart"></i>
             </a>
             <button class="nav-toggle">
@@ -143,7 +144,7 @@
                             <input type="number" name="number" id="" class="form-input" />
                         </div>
                         <div class="double btn">
-                            <a href="cart.html" class="btn-redirect">
+                            <a href="/cart" class="btn-redirect">
                                 <i class="fa-solid fa-arrow-left"></i> Back to Cart
                             </a>
                             <a href="./checkout-shipment.html" class="form-link">

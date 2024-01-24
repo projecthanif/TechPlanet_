@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Cart;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Shopcontroller extends Controller
 {
@@ -30,10 +32,25 @@ class Shopcontroller extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * Stores a new order from customer
      */
-    public function store(Request $request)
+    public function store(Request $request, $product_id)
     {
-        //
+        if (!Auth::check()) {
+            return redirect('/login');
+        }
+
+        $product = Product::find($product_id);
+        $cart = [
+            'product_id' => $product->id,
+            'user_id' => auth()->user()->id,
+            'quantity' => '1',
+            'total_price' => $product->price
+        ];
+
+        if (Cart::create($cart)) {
+            // Product::update('')
+        }
     }
 
     /**

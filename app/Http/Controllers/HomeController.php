@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('/frontend/index', [
-            'products' => Product::latest()->paginate(8),
+            'products' => Product::take(8)->get(),
             'nav' => 'home'
         ]);
     }
