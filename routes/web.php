@@ -23,7 +23,7 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-/** FrontPage  */
+/** Customer's Page  */
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -45,19 +45,10 @@ Route::post('/login', [AuthController::class, 'authenticate']);
 Route::get('/register', [AuthController::class, 'create'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'store']);
 
-
-
-
-
-
-
-
 /**  Dashboard */
 
 //DASHBOARD INDEX PAGE
 Route::get('/dashboard', [IndexController::class, 'index']);
-
-
 
 // PRODUCT
 Route::get('product/lists', [ProductController::class, 'index']);
