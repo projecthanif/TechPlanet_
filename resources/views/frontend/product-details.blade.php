@@ -22,20 +22,20 @@
             <h1 class="nav-logo-text"><span class="cr-red">Tech</span>Planet</h1>
         </div>
         <ul class="navbar">
-            <li class="nav-list"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-list"><a href="/" class="nav-link">Home</a></li>
             <li class="nav-list">
-                <a href="shop.html" class="nav-link active">Shop</a>
+                <a href="/shop" class="nav-link active">Shop</a>
             </li>
             <li class="nav-list">
-                <a href="about.html" class="nav-link">About Us</a>
+                <a href="/about" class="nav-link">About Us</a>
             </li>
             <li class="nav-list"><a href="blog.html" class="nav-link">Blog</a></li>
             <li class="nav-list">
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="/contact" class="nav-link">Contact</a>
             </li>
         </ul>
         <ul class="navbar end">
-            <a href="" class="link-s">
+            <a href="/login" class="link-s">
                 <button class="navbar-btn">Login</button>
             </a>
             <a href="" class="link-s">
