@@ -16,18 +16,10 @@ class Shopcontroller extends Controller
     public function index()
     {
         return view('frontend.shop', [
-            'products' => Product::latest()->paginate(12),
+            'products' => Product::where(['availability' => 1])->latest()->paginate(12),
             'categories' => Category::all(),
             'nav' => 'shop'
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -49,8 +41,13 @@ class Shopcontroller extends Controller
         ];
 
         if (Cart::create($cart)) {
-            // Product::update('')
+            $product->update(['qty' => ($product->qty - 1)]);
+            if ($product->qty <= 0) {
+                $product->update(['availability' => 0]);
+            }
         }
+
+        return redirect()->back();
     }
 
     /**
@@ -62,29 +59,5 @@ class Shopcontroller extends Controller
             'product' => Product::find($product_id),
             // 'similar' => Product::all()->where('category', )
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Product $product)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Product $product)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Product $product)
-    {
-        //
     }
 }

@@ -6,7 +6,7 @@
     <div class="card-foot">
         <h4 class="card-name">{{ $product['name'] }}</h4>
         <h5 class="card-price">{{ $product['price'] }}</h5>
-        <a href="#" class="btn-links">
+        <a href="/shop/{{ $product->id }}" class="btn-links">
             <button class="btn-content pr">Browse</button>
         </a>
     </div>
