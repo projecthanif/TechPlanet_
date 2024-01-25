@@ -10,10 +10,11 @@
         <div class="product-type">
             <div class="p-title">Product Categories</div>
             <ul class="categories">
-                <li><a href="#" class="prod-list-link active">All</a></li>
+                <li><a href="/shop" class="prod-list-link active">All</a></li>
                 @unless (count($categories) == 0)
                     @foreach ($categories as $category)
-                        <li><a href="" class="prod-list-link">{{ $category['name'] }}</a></li>
+                        <li><a href="/shopBy/{{ $category['name'] }}" class="prod-list-link">{{ $category['name'] }}</a>
+                        </li>
                     @endforeach
                 @endunless
             </ul>

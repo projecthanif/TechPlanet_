@@ -31,6 +31,7 @@ Route::get('/', [HomeController::class, 'index']);
 //SHOP
 Route::get('/shop', [Shopcontroller::class, 'index']);
 Route::get('/shop/{product_id}', [Shopcontroller::class, 'show']);
+Route::get('/shopBy/{category}', [Shopcontroller::class, 'showByCategory']);
 Route::post('/shop/{product_id}', [Shopcontroller::class, 'store']);
 
 Route::view('/about', 'frontend/about', ['nav' => 'about']);

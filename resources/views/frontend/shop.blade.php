@@ -51,7 +51,7 @@
                 @endunless
 
             </div>
-            <div class="pagination">
+            {{-- <div class="pagination">
                 <ul class="pagin">
                     <li class="pagin-list">
                         <a href="#" class="pagin-link active">1</a>
@@ -61,7 +61,7 @@
                     </li>
                     <!-- <button type="submit"><i class="fa fa-right"></i></button> -->
                 </ul>
-            </div>
+            </div> --}}
         </article>
     </main>
 

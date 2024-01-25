@@ -13,7 +13,11 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view('frontend.cart', ['nav' => 'cart']);
+        return view('frontend.cart', [
+            'carts' => Cart::where(['user_id' => auth()->user()->id])->get(),
+            // 'image' => Product::where([''])
+            'nav' => 'cart'
+        ]);
     }
 
     /**

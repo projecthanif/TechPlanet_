@@ -51,106 +51,11 @@
                             <th></th>
                         </thead>
                         <tbody>
-                            <tr class="cart-card">
-                                <td class="items">
-                                    <img src="./assets/image/download__10_-removebg-preview.png" alt=""
-                                        class="cart-img" />
-                                    <div class="cart-card-info">
-                                        <h4 class="cart-name">Samsung Galaxy Watch Active2</h4>
-                                        <p class="item-color">Blue</p>
-                                        <p class="item-number">Quantity(1)</p>
-                                    </div>
-                                </td>
-                                <td class="quantity">
-                                    1
-                                    <!-- <div class="amount">1</div>
-                    <div class="counter">
-                      <div class="increase">+</div>
-                      <div class="decrease">-</div>
-                    </div> -->
-                                </td>
-                                <td class="price">
-                                    <div>
-                                        <h5>$1,200</h5>
-                                    </div>
-                                </td>
-                                <td class="delete"></td>
-                            </tr>
-                            <tr class="cart-card">
-                                <td class="items">
-                                    <img src="./assets/image/download__12_-removebg-preview.png" alt=""
-                                        class="cart-img" />
-                                    <div class="cart-card-info">
-                                        <h4 class="cart-name">Sony PlayStation 5</h4>
-                                        <p class="item-color">Blue</p>
-                                        <p class="item-number">Quantity(1)</p>
-                                    </div>
-                                </td>
-                                <td class="quantity">
-                                    1
-                                    <!-- <div class="amount">1</div>
-                    <div class="counter">
-                      <div class="increase">+</div>
-                      <div class="decrease">-</div>
-                    </div> -->
-                                </td>
-                                <td class="price">
-                                    <div>
-                                        <h5>$1,200</h5>
-                                    </div>
-                                </td>
-                                <td class="delete"></td>
-                            </tr>
-                            <tr class="cart-card">
-                                <td class="items">
-                                    <img src="./assets/image/download__10_-removebg-preview.png" alt=""
-                                        class="cart-img" />
-                                    <div class="cart-card-info">
-                                        <h4 class="cart-name">Samsung Galaxy Watch Active2</h4>
-                                        <p class="item-color">Blue</p>
-                                        <p class="item-number">Quantity(1)</p>
-                                    </div>
-                                </td>
-                                <td class="quantity">
-                                    1
-                                    <!-- <div class="amount">1</div>
-                    <div class="counter">
-                      <div class="increase">+</div>
-                      <div class="decrease">-</div>
-                    </div> -->
-                                </td>
-                                <td class="price">
-                                    <div>
-                                        <h5>$1,200</h5>
-                                    </div>
-                                </td>
-                                <td class="delete"></td>
-                            </tr>
-                            <tr class="cart-card">
-                                <td class="items">
-                                    <img src="./assets/image/download__12_-removebg-preview.png" alt=""
-                                        class="cart-img" />
-                                    <div class="cart-card-info">
-                                        <h4 class="cart-name">Sony PlayStation 5</h4>
-                                        <p class="item-color">Blue</p>
-                                        <p class="item-number">Quantity(1)</p>
-                                    </div>
-                                </td>
-                                <td class="quantity">
-                                    1
-                                    <!-- <div class="amount">1</div>
-                    <div class="counter">
-                      <div class="increase">+</div>
-                      <div class="decrease">-</div>
-                    </div> -->
-                                </td>
-                                <td class="price">
-                                    <div>
-                                        <h5>$1,200</h5>
-                                    </div>
-                                </td>
-                                <td class="delete"></td>
-                            </tr>
+                            @unless (count($carts) == 0)
+                                @foreach ($carts as $cart)
+                                    <x-cart-table :cart="$cart" />
+                                @endforeach
+                            @endunless
                         </tbody>
                     </table>
                 </section>

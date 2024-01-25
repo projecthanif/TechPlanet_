@@ -60,4 +60,14 @@ class Shopcontroller extends Controller
             // 'similar' => Product::all()->where('category', )
         ]);
     }
+
+    public function showByCategory(Product $product, $category)
+    {
+        // dd(Product::where(['category' => $category])->get());
+        return view('frontend.shop', [
+            'products' => Product::where(['category' => $category])->get(),
+            'categories' => Category::all(),
+            'nav' => 'shop'
+        ]);
+    }
 }
