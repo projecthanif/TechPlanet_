@@ -33,7 +33,6 @@ Route::get('/shop', [Shopcontroller::class, 'index']);
 Route::get('/shop/{product_id}', [Shopcontroller::class, 'show']);
 Route::get('/shopBy/{category}', [Shopcontroller::class, 'showByCategory']);
 Route::post('/shop/{product_id}', [Shopcontroller::class, 'store']);
-// Route::get('/shopBy/{category}', [Shopcontroller::class, 'showByCategory']);
 
 Route::view('/about', 'frontend/about', ['nav' => 'about']);
 Route::view('/blog', 'frontend/blog', ['nav' => 'blog']);
@@ -62,10 +61,10 @@ Route::delete('product/delete/{product_id}', [ProductController::class, 'destroy
 Route::patch('product/edit/{product_id}', [ProductController::class, 'edit']);
 
 //Category
-Route::get('/product/category', [CategoryController::class, 'index']);
+Route::get('/product/category', [CategoryController::class, 'index'])->name('xyz');
 Route::post('/product/category/create', [CategoryController::class, 'store']);
 Route::patch('/product/category/edit', [CategoryController::class, 'edit']);
-// Route::delete('/product/category/edit', [CategoryController::class, 'destroy']);
+Route::delete('/category/delete/{category_id}', [CategoryController::class, 'destroy']);
 
 //Order
 Route::get('/order/lists', [OrderController::class, 'index']);

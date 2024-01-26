@@ -58,7 +58,7 @@
                         <div class="app-brand justify-content-center">
                             <a href="/" class="app-brand-link gap-2">
                                 <span class="app-brand-logo demo">
-                                    <svg width="25" viewBox="0 0 25 42" version="1.1"
+                                    {{-- <svg width="25" viewBox="0 0 25 42" version="1.1"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <defs>
                                             <path
@@ -103,7 +103,7 @@
                                                 </g>
                                             </g>
                                         </g>
-                                    </svg>
+                                    </svg> --}}
                                 </span>
                                 <span class="app-brand-text fs-3 text-body fw-bolder"> <span
                                         class="text-danger">Tech</span>Planet</span>
@@ -124,6 +124,9 @@
                                 <input type="text" class="form-control" id="email" name="email"
                                     placeholder="Enter your email or username" autofocus />
                             </div>
+                            @error('email')
+                                <p class="text-danger">{{ $message }}</p>
+                            @enderror
                             <div class="mb-3 form-password-toggle">
                                 <div class="d-flex justify-content-between">
                                     <label class="form-label" for="password">Password</label>

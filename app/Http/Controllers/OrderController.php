@@ -14,7 +14,8 @@ class OrderController extends Controller
     public function index()
     {
         // dd();
-        return view('/dashboard/order-lists', [
+        return view('dashboard.order-lists', [
+            'orders' => Order::latest()->get(),
             'nav' => 'order',
             'list' => 'list',
         ]);

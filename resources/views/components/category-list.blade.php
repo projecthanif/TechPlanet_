@@ -12,11 +12,16 @@
                 <i class="bx bx-dots-vertical-rounded"></i>
             </button>
             <div class="dropdown-menu">
-                <button type="submit" class="dropdown-item" href="javascript:void(0);"><i
+                {{-- <button type="submit" class="dropdown-item" href="javascript:void(0);"><i
                         class="bx bx-edit-alt me-1"></i>
-                    Edit</button>
-                <button type="submit" class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
-                    Delete</button>
+                    Edit</button> --}}
+                <form action="/category/delete/{{ $category['id'] }}" method="post">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="dropdown-item" href="javascript:void(0);"><i
+                            class="bx bx-trash me-1"></i>
+                        Delete</button>
+                </form>
             </div>
         </div>
     </td>

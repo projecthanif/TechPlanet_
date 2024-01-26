@@ -101,14 +101,11 @@
                                             </tr>
                                         </thead>
                                         <tbody class="table-border-bottom-0">
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
+                                            @unless (count($orders) == 0)
+                                                @foreach ($orders as $order)
+                                                    <x-order-list :order="$order" />
+                                                @endforeach
+                                            @endunless
                                         </tbody>
                                     </table>
                                 </div>

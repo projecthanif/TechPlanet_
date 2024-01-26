@@ -12,13 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id();
-            $table->string("order_id")->constrained();
-            $table->date("date");
-            $table->string("customer");
+            $table->uuid();
+            $table->string("product_id")->constrained();
             $table->string("customer_id")->constrained();
-            $table->string("payment_status");
-            $table->string("method");
+            $table->string("payment_status")->default(false);
+            $table->string("method")->default('card');
             $table->timestamps();
         });
     }

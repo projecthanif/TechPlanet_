@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -33,14 +34,21 @@ class Shopcontroller extends Controller
         }
 
         $product = Product::find($product_id);
+        //array for cart
         $cart = [
             'product_id' => $product->id,
             'user_id' => auth()->user()->id,
             'quantity' => '1',
             'total_price' => $product->price
         ];
+        //array for order
+        $order = [
+            'product_id' => $product->id,
+            'customer_id' => auth()->user()->id,
+        ];
 
         if (Cart::create($cart)) {
+            Order::create($order);
             $product->update(['qty' => ($product->qty - 1)]);
             if ($product->qty <= 0) {
                 $product->update(['availability' => 0]);

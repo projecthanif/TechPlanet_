@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return BasePolicy::viewAny(view('/dashboard/product-category', [
+        return BasePolicy::viewAny(view('dashboard.product-category', [
             'categories' => Category::all(),
             'nav' => 'product',
             'list' => 'clist'
@@ -67,8 +67,12 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Category $category, int $category_id)
     {
-        //
+        $deleting = $category::find($category_id);
+        // dd($deleting);
+
+        $deleting->delete();
+        return redirect()->back()->with(['message'], 'Category deleted successfully');
     }
 }
