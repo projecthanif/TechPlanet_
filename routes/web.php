@@ -33,6 +33,7 @@ Route::get('/shop', [Shopcontroller::class, 'index']);
 Route::get('/shop/{product_id}', [Shopcontroller::class, 'show']);
 Route::get('/shopBy/{category}', [Shopcontroller::class, 'showByCategory']);
 Route::post('/shop/{product_id}', [Shopcontroller::class, 'store']);
+// Route::get('/shopBy/{category}', [Shopcontroller::class, 'showByCategory']);
 
 Route::view('/about', 'frontend/about', ['nav' => 'about']);
 Route::view('/blog', 'frontend/blog', ['nav' => 'blog']);
