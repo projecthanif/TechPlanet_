@@ -46,6 +46,7 @@ class Shopcontroller extends Controller
         ];
         //array for order
         $order = [
+            'uuid' => uuid_create(),
             'product_id' => $product->product_id,
             'customer_id' => auth()->user()->id,
         ];
