@@ -29,7 +29,9 @@
             <li class="nav-list">
                 <a href="/about" class="nav-link">About Us</a>
             </li>
-            <li class="nav-list"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-list">
+                <a href="/blog" class="nav-link">Blog</a>
+            </li>
             <li class="nav-list">
                 <a href="/contact" class="nav-link">Contact</a>
             </li>

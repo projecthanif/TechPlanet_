@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    use HasFactory, HasUui ds;
+    use HasFactory, HasUuids;
     protected $guarded = [];
 }

@@ -13,11 +13,11 @@ use App\Http\Requests\Auth\StoreAuthRequest;
 class AuthController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a Login page for an existing User
      */
     public function index()
     {
-        return view('/auth/auth-login');
+        return view('auth.auth-login');
     }
 
     /**
@@ -30,7 +30,7 @@ class AuthController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials, true)) {
             $request->session()->regenerate();
 
             return redirect()->intended('/');
@@ -41,9 +41,13 @@ class AuthController extends Controller
         ])->onlyInput('email');
     }
 
+    /**
+     * Display a Register page for a  User
+     */
+
     public function create()
     {
-        return view('/auth/auth-register');
+        return view('auth.auth-register');
     }
 
     public function store(StoreAuthRequest $request)

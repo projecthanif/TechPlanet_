@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
 
@@ -13,9 +15,11 @@ class CartController extends Controller
      */
     public function index()
     {
+        if (!Auth::check()) {
+            return view('auth.auth-login');
+        }
         return view('frontend.cart', [
             'carts' => Cart::where(['user_id' => auth()->user()->id])->get(),
-            // 'image' => Product::where([''])
             'nav' => 'cart'
         ]);
     }

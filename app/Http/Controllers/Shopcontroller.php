@@ -34,16 +34,19 @@ class Shopcontroller extends Controller
         }
 
         $product = Product::find($product_id);
+
         //array for cart
         $cart = [
-            'product_id' => $product->id,
+            'product_id' => $product->product_id,
+            'product_image' => $product->image_path,
+            'product_price' => $product->price,
             'user_id' => auth()->user()->id,
             'quantity' => '1',
             'total_price' => $product->price
         ];
         //array for order
         $order = [
-            'product_id' => $product->id,
+            'product_id' => $product->product_id,
             'customer_id' => auth()->user()->id,
         ];
 
@@ -65,7 +68,6 @@ class Shopcontroller extends Controller
     {
         return view('frontend.product-details', [
             'product' => Product::find($product_id),
-            // 'similar' => Product::all()->where('category', )
         ]);
     }
 
