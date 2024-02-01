@@ -17,39 +17,7 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-logo">
-            <img src="assets/image/64-bit.png" alt="" class="logo" />
-            <h1 class="nav-logo-text"><span class="cr-red">Tech</span>Planet</h1>
-        </div>
-        <ul class="navbar">
-            <li class="nav-list">
-                <a href="./index.html" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-list"><a href="shop.html" class="nav-link">Shop</a></li>
-            <li class="nav-list">
-                <a href="about.html" class="nav-link">About Us</a>
-            </li>
-            <li class="nav-list"><a href="blog.html" class="nav-link">Blog</a></li>
-            <li class="nav-list">
-                <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-        </ul>
-        <ul class="navbar end">
-            <a href="" class="link-s">
-                <button class="navbar-btn">Login</button>
-            </a>
-            <a href="" class="link-s">
-                <i class="fa fa-search"></i>
-            </a>
-            <a href="/cart" class="link-s">
-                <i class="fa fa-shopping-cart"></i>
-            </a>
-            <button class="nav-toggle">
-                <i class="fa fa-bars fa-1x"></i>
-            </button>
-        </ul>
-    </nav>
+    <x-front-nav :nav="$nav" />
     <main>
         <section>
             <div class="jumbotron">
@@ -67,42 +35,7 @@
         </section>
         <article class="main">
             <div class="flex">
-                <section class="sidebar">
-                    <div class="nav-logo step-logo">
-                        <img src="assets/image/64-bit.png" alt="" class="logo" />
-                        <h1 class="nav-logo-text">
-                            <span class="cr-red">Tech</span>Planet
-                        </h1>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox red"></div>
-                            <h5 class="which-step">STEP 01</h5>
-                        </div>
-                        <p class="step-title">Billing address</p>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox red"></div>
-                            <h5 class="which-step">STEP 02</h5>
-                        </div>
-                        <p class="step-title">Shipment</p>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox red"></div>
-                            <h5 class="which-step">STEP 03</h5>
-                        </div>
-                        <p class="step-title">Payment</p>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox"></div>
-                            <h5 class="which-step">STEP 04</h5>
-                        </div>
-                        <p class="step-title">Review</p>
-                    </div>
-                </section>
+                <x-checkout-side-bar :tick="$tick" />
                 <section class="payment">
                     <h6 class="which-step-sm">Step 03</h6>
                     <h3 class="step-title-md">Payment</h3>
@@ -110,8 +43,8 @@
                     <form action="">
                         <div class="form-inputs">
                             <label for="full name">Card Number</label>
-                            <input type="number" name="card_number" id="" class="form-input"
-                                min="16" max="16" />
+                            <input type="number" name="card_number" id="" class="form-input" min="16"
+                                max="16" />
                         </div>
                         <div class="form-inputs">
                             <label for="email">Cardholder's Name</label>
@@ -130,10 +63,10 @@
                             </div>
                         </div>
                         <div class="double btn">
-                            <a href="./checkout-address.html" class="btn-redirect">
+                            <a href="/checkout/address" class="btn-redirect">
                                 <i class="fa-solid fa-arrow-left"></i> Back to address
                             </a>
-                            <a href="./checkout-shipment.html" class="form-link">
+                            <a href="/checkout/shipment" class="form-link">
                                 <button class="btn-form" type="submit">
                                     Continue to Shipping
                                 </button>

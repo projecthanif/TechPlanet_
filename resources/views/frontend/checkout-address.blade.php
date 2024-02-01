@@ -35,42 +35,7 @@
         </section>
         <article class="main">
             <div class="flex">
-                <section class="sidebar">
-                    <div class="nav-logo step-logo">
-                        <img src="assets/image/64-bit.png" alt="" class="logo" />
-                        <h1 class="nav-logo-text">
-                            <span class="cr-red">Tech</span>Planet
-                        </h1>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox red"></div>
-                            <h5 class="which-step">STEP 01</h5>
-                        </div>
-                        <p class="step-title">Billing address</p>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox"></div>
-                            <h5 class="which-step">STEP 02</h5>
-                        </div>
-                        <p class="step-title">Shipment</p>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox"></div>
-                            <h5 class="which-step">STEP 03</h5>
-                        </div>
-                        <p class="step-title">Payment</p>
-                    </div>
-                    <div class="step">
-                        <div class="between">
-                            <div class="checkbox"></div>
-                            <h5 class="which-step">STEP 04</h5>
-                        </div>
-                        <p class="step-title">Review</p>
-                    </div>
-                </section>
+                <x-checkout-side-bar :tick="$tick" />
                 <section class="form">
                     <h6 class="which-step-sm">Step 01</h6>
                     <h3 class="step-title-md">Address</h3>
@@ -115,9 +80,9 @@
                                 <i class="fa-solid fa-arrow-left"></i> Back to Cart
                             </a>
                             <a href="/checkout/shipment" class="form-link">
-                                <button class="btn-form" type="submit">
-                                    Continue to Shipping
-                                </button>
+                                {{-- <button class="btn-form" type="submit"> --}}
+                                Continue to Shipping
+                                {{-- </button> --}}
                             </a>
                         </div>
                     </form>

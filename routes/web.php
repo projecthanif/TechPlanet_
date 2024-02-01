@@ -45,11 +45,13 @@ Route::view('/contact', 'frontend/contact', ['nav' => 'contact']);
 Route::get('/cart', [CartController::class, 'index']);
 
 //CHECKOUT
-Route::get('/checkout/adress', [AddressController::class, 'index']);
+Route::get('/checkout/address', [AddressController::class, 'index']);
 // Route::post('/checkout/address', [CheckoutController::class, 'index']);
-Route::get('/checkout/shipping', [ShippingController::class, 'index']);
+Route::get('/checkout/shipment', [ShippingController::class, 'index']);
 
 Route::get('/checkout/payment', [PaymentController::class, 'index']);
+
+// Route::get();
 
 
 /** Users Authentication */

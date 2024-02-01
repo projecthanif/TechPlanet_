@@ -15,7 +15,10 @@ class AddressController extends Controller
      */
     public function index()
     {
-        //
+        return view('frontend.checkout-address', [
+            'nav' => '',
+            'tick' => 'address'
+        ]);
     }
 
     /**
