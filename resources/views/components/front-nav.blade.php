@@ -17,16 +17,15 @@
         </li>
     </ul>
     <ul class="navbar end">
-        <a href="/login" class="link-s">
-            <button class="navbar-btn">Login</button>
-        </a>
-        {{-- @if (auth()->user())
-            {{ auth()->user()->id }}
+        @if (auth()->user())
+            <div class="user-logo">
+
+            </div>
         @else
             <a href="" class="link-s">
                 <button class="navbar-btn">Login</button>
             </a>
-        @endif --}}
+        @endif
         <a href="/login" class="link-s">
             <i class="fa fa-search"></i>
         </a>

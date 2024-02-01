@@ -100,7 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="./checkout-address.html" class="checkout-link">
+                        <a href="/checkout/address" class="checkout-link">
                             <button class="btn bg-red">checkout</button>
                         </a>
                     </div>

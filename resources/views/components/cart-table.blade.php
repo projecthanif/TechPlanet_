@@ -2,7 +2,7 @@
 
 <tr class="cart-card">
     <td class="items">
-        <img src="/storage" alt="" class="cart-img" />
+        <img src="/storage/{{$cart->product_image}}" alt="" class="cart-img" />
         <div class="cart-card-info">
             <h4 class="cart-name">{{ $cart->name }}</h4>
             <p class="item-color">Blue</p>

@@ -1,17 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Shopcontroller;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\CartController;
 use App\Http\Controllers\Dashboard\BlogController;
+use App\Http\Controllers\Checkout\AddressController;
+use App\Http\Controllers\Checkout\PaymentController;
+use App\Http\Controllers\Checkout\ShippingController;
 use App\Http\Controllers\Dashboard\ProductController;
+use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\CustomerController;
-use App\Http\Controllers\Dashboard\ProfileController;
-use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +41,15 @@ Route::view('/about', 'frontend/about', ['nav' => 'about']);
 Route::view('/blog', 'frontend/blog', ['nav' => 'blog']);
 Route::view('/contact', 'frontend/contact', ['nav' => 'contact']);
 
+//CART
 Route::get('/cart', [CartController::class, 'index']);
+
+//CHECKOUT
+Route::get('/checkout/adress', [AddressController::class, 'index']);
+// Route::post('/checkout/address', [CheckoutController::class, 'index']);
+Route::get('/checkout/shipping', [ShippingController::class, 'index']);
+
+Route::get('/checkout/payment', [PaymentController::class, 'index']);
 
 
 /** Users Authentication */
