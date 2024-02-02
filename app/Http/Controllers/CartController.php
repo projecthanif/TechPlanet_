@@ -7,6 +7,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
+use App\Models\CartSummary;
 
 class CartController extends Controller
 {
@@ -19,13 +20,12 @@ class CartController extends Controller
             return view('auth.auth-login');
         }
         $user = auth()->user()->id;
-        $num = count(Cart::totalPrice($user));
-        $prices = array_sum(Cart::totalPrice($user));
+        $arr = CartSummary::totalPrice();
         return view('frontend.cart', [
             'carts' => Cart::where(['user_id' => $user])->get(),
             'nav' => 'cart',
-            'total_sum' => $prices,
-            'num' => $num
+            'total_sum' => $arr['prices'],
+            'num' => $arr['num']
         ]);
     }
 

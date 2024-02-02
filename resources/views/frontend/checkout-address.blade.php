@@ -87,7 +87,7 @@
                         </div>
                     </form>
                 </section>
-                <x-checkout-summary-card />
+                <x-checkout-summary-card :total_sum="$total_sum" :num="$num" />
             </div>
         </article>
     </main>

@@ -7,6 +7,7 @@ use App\Models\Checkout\Address;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAddressRequest;
 use App\Http\Requests\UpdateAddressRequest;
+use App\Models\CartSummary;
 
 class AddressController extends Controller
 {
@@ -15,9 +16,13 @@ class AddressController extends Controller
      */
     public function index()
     {
+
+        $arr = CartSummary::totalPrice();
         return view('frontend.checkout-address', [
             'nav' => '',
-            'tick' => 'address'
+            'tick' => 'address',
+            'total_sum' => $arr['prices'],
+            'num' => $arr['num']
         ]);
     }
 

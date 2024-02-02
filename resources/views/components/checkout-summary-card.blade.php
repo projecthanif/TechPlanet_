@@ -1,4 +1,4 @@
-{{-- @props(['total_orders']) --}}
+@props(['total_sum', 'num'])
 
 <section class="summary">
     <div class="order-sumary-card">
@@ -12,8 +12,8 @@
             <button type="submit" class="btn-red">Apply</button>
         </form>
         <div class="content-flex">
-            <h5>Item(5)</h5>
-            <h5>$2000</h5>
+            <h5>Item({{ $num }})</h5>
+            <h5>${{ $total_sum }}</h5>
         </div>
         <div class="content-flex">
             <h5>Discount(0%)</h5>

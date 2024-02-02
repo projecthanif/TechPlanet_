@@ -7,6 +7,7 @@ use App\Models\Checkout\Shipping;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreShippingRequest;
 use App\Http\Requests\UpdateShippingRequest;
+use App\Models\CartSummary;
 
 class ShippingController extends Controller
 {
@@ -15,9 +16,12 @@ class ShippingController extends Controller
      */
     public function index()
     {
+        $arr = CartSummary::totalPrice();
         return view('frontend.checkout-shipment', [
             'nav' => '',
-            'tick' => 'shippment'
+            'tick' => 'shippment',
+            'total_sum' => $arr['prices'],
+            'num' => $arr['num']
         ]);
     }
 

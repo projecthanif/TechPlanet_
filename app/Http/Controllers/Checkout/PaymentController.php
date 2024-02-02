@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Checkout;
 
+use App\Models\CartSummary;
 use App\Models\Checkout\Payment;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePaymentRequest;
@@ -14,9 +15,12 @@ class PaymentController extends Controller
      */
     public function index()
     {
+        $arr = CartSummary::totalPrice();
         return view('frontend.checkout-payment', [
             'nav' => '',
-            'tick' => 'payment'
+            'tick' => 'payment',
+            'total_sum' => $arr['prices'],
+            'num' => $arr['num']
         ]);
     }
 
