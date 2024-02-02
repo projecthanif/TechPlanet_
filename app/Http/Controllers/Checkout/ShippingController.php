@@ -17,7 +17,7 @@ class ShippingController extends Controller
     {
         return view('frontend.checkout-shipment', [
             'nav' => '',
-            'tick' => 'shipping'
+            'tick' => 'shippment'
         ]);
     }
 

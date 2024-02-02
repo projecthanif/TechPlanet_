@@ -94,3 +94,4 @@ Route::get('/blog/create', [BlogController::class, 'create']);
 Route::post('/blog/create', [BlogController::class, 'store']);
 Route::patch('/blog/edit/{id}', [BlogController::class, 'edit']);
 Route::delete('/blog/delete/{id}', [BlogController::class, 'destroy']);
+

@@ -2,21 +2,21 @@
 
 <section class="sidebar">
     <div class="nav-logo step-logo">
-        <img src="assets/image/64-bit.png" alt="" class="logo" />
+        <img src="{{ asset('front/assets/image/64-bit.png') }}" alt="" class="logo" />
         <h1 class="nav-logo-text">
             <span class="cr-red">Tech</span>Planet
         </h1>
     </div>
     <div class="step">
         <div class="between">
-            <div class="checkbox {{ $tick == 'address' ? 'red' : '' }}"></div>
+            <div class="checkbox {{ $tick == 'address' || 'shippment' || 'payment' ? 'red' : '' }}"></div>
             <h5 class="which-step">STEP 01</h5>
         </div>
         <p class="step-title">Billing address</p>
     </div>
     <div class="step">
         <div class="between">
-            <div class="checkbox {{ $tick == 'shippment' ? 'red' : '' }}"></div>
+            <div class="checkbox {{ $tick == 'shippment' || 'payment' ? 'red' : '' }}"></div>
             <h5 class="which-step">STEP 02</h5>
         </div>
         <p class="step-title">Shipment</p>
