@@ -18,6 +18,9 @@
 
 <body>
     <x-front-nav :nav="$nav" />
+    @error(['msg'])
+        <h1>{{ $message }}</h1>
+    @enderror
     <main>
         <section>
             <div class="jumbotron">
@@ -40,26 +43,26 @@
                     <h6 class="which-step-sm">Step 03</h6>
                     <h3 class="step-title-md">Payment</h3>
                     <p class="step-desc">Payment method: credit card</p>
-                    <form action="">
+                    <form action="#" method="post">
+                        @method('post')
+                        @csrf
                         <div class="form-inputs">
                             <label for="full name">Card Number</label>
-                            <input type="number" name="card_number" id="" class="form-input" min="16"
-                                max="16" />
+                            <input type="number" name="card_number" id="" class="form-input" />
                         </div>
                         <div class="form-inputs">
-                            <label for="email">Cardholder's Name</label>
+                            <label for="email">Cardholder's Email</label>
                             <input type="email" name="cardholder_name" id="" class="form-input" />
                         </div>
+                        <input type="hidden" value="2000" name="amount">
                         <div class="double">
                             <div class="form-inputs">
                                 <label for="zip_code">Expire Date </label>
-                                <input type="number" name="expire_date" id="" class="form-input"
-                                    min="5" />
+                                <input type="number" name="expire_date" id="" class="form-input" />
                             </div>
                             <div class="form-inputs">
                                 <label for="cvv_code">CVV Code</label>
-                                <input type="number" name="cvv_code" min="3" max="3" id=""
-                                    class="form-input" />
+                                <input type="number" name="cvv_code" id="" class="form-input" />
                             </div>
                         </div>
                         <div class="double btn">
@@ -73,6 +76,7 @@
                             </a>
                         </div>
                     </form>
+
                 </section>
                 <x-checkout-summary-card :total_sum="$total_sum" :num="$num" />
             </div>

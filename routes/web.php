@@ -15,6 +15,7 @@ use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\CustomerController;
+use App\Http\Controllers\PaymentGateway\PaymentGateWayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,12 @@ use App\Http\Controllers\Dashboard\CustomerController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+// // Laravel 5.1.17 and above
+// Route::post('/pay', [PaymentGateWayController::class, 'redirectToGateway'])->name('pay');
+// // Laravel 8 & 9
+// Route::get('/payment/callback', [PaymentGateWayController::class, 'handleGatewayCallback']);
 
 /** Customer's Page  */
 
@@ -94,4 +101,3 @@ Route::get('/blog/create', [BlogController::class, 'create']);
 Route::post('/blog/create', [BlogController::class, 'store']);
 Route::patch('/blog/edit/{id}', [BlogController::class, 'edit']);
 Route::delete('/blog/delete/{id}', [BlogController::class, 'destroy']);
-
