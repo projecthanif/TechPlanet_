@@ -1,3 +1,62 @@
+<h1 align="center"> TechPlanet </h1>
+
+
+<p>This is the README file for the TechPlanet, a web application built using PHP, LARAVEL and MySQL. it is an ecommerce website focus on tech accesories and gadget.</p>
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+
+## Overview
+
+TechPlanet is a ecommerce web application specifically for tech accesories that allow user to place an order, view it in the cart and also pay for it through a payment gateway
+
+
+## Features
+
+- Browse and select items from the menu.
+- Convenient shopping cart for order review.
+- Secure online payment processing.
+- User-friendly interface for both customers and administrators.
+
+
+## Installation
+
+1. Clone this repository to your web server:
+
+   ```shell
+   git clone https://github.com/projecthanif/TechPlanet_.git
+   ```
+
+2. Set up your web server to point to the project folder.
+
+3. Install the dependencies in composer.json file
+
+4. Configure your database connection by creating your own `.env` file use the `.env.example` as reference 
+
+5. Run migration after look thourgh laravel
+
+
+## Usage
+
+1. Customers can visit your website, browse the menu, and place orders.
+
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork and submit a pull request.
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
