@@ -54,28 +54,18 @@
                             <label for="email">Cardholder's Email</label>
                             <input type="email" name="email" id="" class="form-input" />
                         </div>
-                        <input type="hidden" value="{{ $total_sum }}" name="amount">
-                        {{-- <div class="double">
-                            <div class="form-inputs">
-                                <label for="zip_code">Expire Date </label>
-                                <input type="number" name="expire_date" id="" class="form-input" />
-                            </div>
-                            <div class="form-inputs">
-                                <label for="cvv_code">CVV Code</label>
-                                <input type="number" name="cvv_code" id="" class="form-input" />
-                            </div>
-                        </div> --}}
+                        <input type="hidden" value="{{ 2000 * 100 }}" name="amount">
                         <div class="double btn">
-                            {{-- <a href="/checkout/address" class="btn-redirect">
-                                <i class="fa-solid fa-arrow-left"></i> Back to address
-                            </a> --}}
-                            {{-- <a href="/checkout/shipment" class="form-link"> --}}
                             <button class="btn-form" type="submit" class="form-link">
-                                Continue to Shipping
+                                Proceed to Payment
                             </button>
-                            {{-- </a> --}}
                         </div>
                     </form>
+                    <div class="top">
+                        <a href="/checkout/address" class="btn-redirect">
+                            <i class="fa-solid fa-arrow-left"></i> Back to address
+                        </a>
+                    </div>
 
                 </section>
                 <x-checkout-summary-card :total_sum="$total_sum" :num="$num" />

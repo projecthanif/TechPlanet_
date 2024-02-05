@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Checkout;
 use Illuminate\Http\Request;
 
-class CheckouController extends Controller
+class CheckoutController extends Controller
 {
     /**
      * Display a listing of the resource.

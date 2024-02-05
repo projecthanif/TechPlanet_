@@ -16,9 +16,7 @@ class PaymentGateWayController extends Controller
     public function redirectToGateway(Request $request)
     {
         $data = array(
-            // "amount" => $request->amount,
-
-            "amount" => 2000 * 100,
+            "amount" => $request->amount,
             "reference" => Paystack()->genTranxRef(),
             "email" => $request->email,
             "currency" => "NGN",
