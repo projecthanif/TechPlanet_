@@ -22,7 +22,7 @@
 
             </div>
         @else
-            <a href="" class="link-s">
+            <a href="/login" class="link-s">
                 <button class="navbar-btn">Login</button>
             </a>
         @endif

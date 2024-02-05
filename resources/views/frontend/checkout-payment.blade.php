@@ -43,19 +43,19 @@
                     <h6 class="which-step-sm">Step 03</h6>
                     <h3 class="step-title-md">Payment</h3>
                     <p class="step-desc">Payment method: credit card</p>
-                    <form action="#" method="post">
+                    <form action="/pay" method="post">
                         @method('post')
                         @csrf
-                        <div class="form-inputs">
+                        {{-- <div class="form-inputs">
                             <label for="full name">Card Number</label>
                             <input type="number" name="card_number" id="" class="form-input" />
-                        </div>
+                        </div> --}}
                         <div class="form-inputs">
                             <label for="email">Cardholder's Email</label>
-                            <input type="email" name="cardholder_name" id="" class="form-input" />
+                            <input type="email" name="email" id="" class="form-input" />
                         </div>
-                        <input type="hidden" value="2000" name="amount">
-                        <div class="double">
+                        <input type="hidden" value="{{ $total_sum }}" name="amount">
+                        {{-- <div class="double">
                             <div class="form-inputs">
                                 <label for="zip_code">Expire Date </label>
                                 <input type="number" name="expire_date" id="" class="form-input" />
@@ -64,16 +64,16 @@
                                 <label for="cvv_code">CVV Code</label>
                                 <input type="number" name="cvv_code" id="" class="form-input" />
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="double btn">
-                            <a href="/checkout/address" class="btn-redirect">
+                            {{-- <a href="/checkout/address" class="btn-redirect">
                                 <i class="fa-solid fa-arrow-left"></i> Back to address
-                            </a>
-                            <a href="/checkout/shipment" class="form-link">
-                                <button class="btn-form" type="submit">
-                                    Continue to Shipping
-                                </button>
-                            </a>
+                            </a> --}}
+                            {{-- <a href="/checkout/shipment" class="form-link"> --}}
+                            <button class="btn-form" type="submit" class="form-link">
+                                Continue to Shipping
+                            </button>
+                            {{-- </a> --}}
                         </div>
                     </form>
 

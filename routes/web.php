@@ -30,9 +30,9 @@ use App\Http\Controllers\PaymentGateway\PaymentGateWayController;
 
 
 // // Laravel 5.1.17 and above
-// Route::post('/pay', [PaymentGateWayController::class, 'redirectToGateway'])->name('pay');
+Route::post('/pay', [PaymentGateWayController::class, 'redirectToGateway'])->name('pay');
 // // Laravel 8 & 9
-// Route::get('/payment/callback', [PaymentGateWayController::class, 'handleGatewayCallback']);
+Route::get('/payment/callback', [PaymentGateWayController::class, 'handleGatewayCallback']);
 
 /** Customer's Page  */
 

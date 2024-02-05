@@ -13,6 +13,7 @@ class CartSummary extends Model
         $arr = [];
         $user = auth()->user()->id;
         $users_cart = Cart::where(['user_id' => $user])->get();
+        $prices = [];
         foreach ($users_cart as $cart) {
             $prices[] = $cart->product_price;
         }
