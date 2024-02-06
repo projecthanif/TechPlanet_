@@ -41,14 +41,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Category $category)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Category $category)
@@ -70,7 +62,6 @@ class CategoryController extends Controller
     public function destroy(Category $category, int $category_id)
     {
         $deleting = $category::find($category_id);
-        // dd($deleting);
 
         $deleting->delete();
         return redirect()->back()->with(['message'], 'Category deleted successfully');

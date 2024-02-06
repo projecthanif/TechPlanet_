@@ -1,12 +1,12 @@
 @font-face {
-    font-family: "Roboto", sans-serif;
-    src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    font-family: "Roboto";
+    src: url("../font/Roboto/Roboto-Regular.ttf");
 }
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto";
 }
 
 nav {
@@ -69,18 +69,9 @@ a.nav-link {
 .navbar.end {
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    width: 20%;
+    align-items: baseline;
+    width: 30%;
     padding: 10px;
-}
-
-.user-logo {
-    width: 20%;
-    height: 30px;
-    padding: 20px;
-    background-color: red;
-    border: none;
-    border-radius: 50px;
 }
 
 .navbar-btn {
@@ -139,4 +130,33 @@ a.nav-link {
     flex-direction: column;
     text-align: center;
     z-index: 100;
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        top: 0;
+        z-index: 100;
+    }
+    .navbar {
+        display: none;
+    }
+    .navbar.end {
+        margin-right: -10px;
+        width: 30%;
+    }
+
+    .navbar-btn {
+        padding: 8px;
+        width: 60px;
+    }
+    .nav-toggle {
+        display: block;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+    }
 }
