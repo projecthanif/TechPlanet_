@@ -17,7 +17,7 @@ return new class extends Migration
             $table->uuid('tracking_id');
             $table->string("product_id")->constrained();
             $table->string("customer_id")->constrained();
-            $table->string('shipping_address');
+            $table->string('shipping_address')->nullable();
             $table->integer('total_amount');
             $table->string("order_status")->default('pending'); //either pending. delivered, cancelled, processing, shipped
             $table->string("method")->default('card');

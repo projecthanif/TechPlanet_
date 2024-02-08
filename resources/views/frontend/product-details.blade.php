@@ -54,7 +54,7 @@
     <main>
         <section class="carousel">
             <div class="left-img">
-                <img src="/storage/{{ $product->image_path }}" alt="" class="carousel-img" />
+                <img src="/storage/{{ $product->image_url }}" alt="" class="carousel-img" />
             </div>
             <div class="right-descp">
                 <h1 class="title">{{ $product->name }}</h1>

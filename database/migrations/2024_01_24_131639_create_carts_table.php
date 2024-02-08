@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('session_id')->nullable();
             $table->string('product_id');
             $table->string('product_price');
+            $table->string('img_url');
             $table->integer('quantity');
             $table->string('item_status')->default('in cart'); //either in cart, purchased, or remove
             $table->integer('total_price');

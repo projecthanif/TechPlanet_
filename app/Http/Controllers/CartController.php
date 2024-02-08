@@ -19,7 +19,7 @@ class CartController extends Controller
         if (!Auth::check()) {
             return view('auth.auth-login');
         }
-        $user = auth()->user()->id;
+        $user = auth()->user()->user_id;
         $arr = CartSummary::totalPrice();
         return view('frontend.cart', [
             'carts' => Cart::where(['user_id' => $user])->get(),

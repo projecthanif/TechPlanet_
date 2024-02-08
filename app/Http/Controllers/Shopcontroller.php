@@ -6,8 +6,10 @@ use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
+use GuzzleHttp\Cookie\SetCookie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class Shopcontroller extends Controller
 {
@@ -35,24 +37,28 @@ class Shopcontroller extends Controller
 
         $product = Product::find($product_id);
 
+        $cartId = "C" . date('Ymdh');
+        $shippingId = "S" . date('Ymhs');
+
         //array for cart
         $cart = [
             'product_id' => $product->product_id,
-            'product_image' => $product->image_path,
+            'cart_id' => $cartId,
+            'img_url' => $product->image_url,
             'product_price' => $product->price,
-            'user_id' => auth()->user()->id,
+            'user_id' => auth()->user()->user_id,
             'quantity' => '1',
+            'shipping_id' => $shippingId,
             'total_price' => $product->price
         ];
         //array for order
         $order = [
-            // 'uuid' => uuid_create(),
             'product_id' => $product->product_id,
             'customer_id' => auth()->user()->id,
         ];
 
         if (Cart::create($cart)) {
-            Order::create($order);
+            // Order::create($order);
             $product->update(['qty' => ($product->qty - 1)]);
             if ($product->qty <= 0) {
                 $product->update(['availability' => 0]);

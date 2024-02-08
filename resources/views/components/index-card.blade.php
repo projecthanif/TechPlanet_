@@ -1,7 +1,7 @@
 @props(['product'])
 <div class="card-sm-2">
     <div class="card-body">
-        <img src="/storage/{{ $product['image_path'] }}" alt="" class="card-body-img" />
+        <img src="/storage/{{ $product['image_url'] }}" alt="" class="card-body-img" />
     </div>
     <div class="card-foot">
         <h4 class="card-name">{{ $product['name'] }}</h4>
