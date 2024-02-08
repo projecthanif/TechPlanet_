@@ -16,35 +16,11 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return BasePolicy::viewAny(view('/dashboard/customer-list', [
+        return BasePolicy::viewAny(view('dashboard.customer-list', [
             'nav' => 'customer',
             'list' => 'list',
             'users' => User::all()
         ]));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreCustomerRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Customer $customer)
-    {
-        //
     }
 
     /**

@@ -68,6 +68,8 @@ Route::post('/login', [AuthController::class, 'authenticate']);
 Route::get('/register', [AuthController::class, 'create'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'store']);
 
+Route::get('/logout', [AuthController::class, 'logout']);
+
 /**  Dashboard */
 
 //DASHBOARD INDEX PAGE
@@ -81,7 +83,7 @@ Route::delete('product/delete/{product_id}', [ProductController::class, 'destroy
 Route::patch('product/edit/{product_id}', [ProductController::class, 'edit']);
 
 //Category
-Route::get('/product/category', [CategoryController::class, 'index'])->name('xyz');
+Route::get('/product/category', [CategoryController::class, 'create']);
 Route::post('/product/category/create', [CategoryController::class, 'store']);
 Route::patch('/product/category/edit', [CategoryController::class, 'edit']);
 Route::delete('/category/delete/{category_id}', [CategoryController::class, 'destroy']);

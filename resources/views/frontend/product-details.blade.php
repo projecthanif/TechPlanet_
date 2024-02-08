@@ -231,9 +231,9 @@
             </div>
         </section>
     </main>
-    {{-- {{Footer}} --}}
+    {{-- Footer}} --}}
     <x-footer />
-    {{-- {{Footer End}} --}}
+    {{-- Footer End}} --}}
     <script src="{{ asset('/front/assets/js/tabs.js') }}"></script>
 </body>
 

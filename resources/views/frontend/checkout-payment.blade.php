@@ -72,9 +72,9 @@
             </div>
         </article>
     </main>
-    {{-- {{Footer}} --}}
+    {{-- Footer}} --}}
     <x-footer />
-    {{-- {{Footer End}} --}}
+    {{-- Footer End}} --}}
 </body>
 
 </html>

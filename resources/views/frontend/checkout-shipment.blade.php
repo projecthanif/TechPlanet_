@@ -89,9 +89,9 @@
             </div>
         </article>
     </main>
-    {{-- {{Footer}} --}}
+    {{-- Footer}} --}}
     <x-footer />
-    {{-- {{Footer End}} --}}
+    {{-- Footer End}} --}}
 
     <script src="./assets/js/shipmentOption.js"></script>
 </body>

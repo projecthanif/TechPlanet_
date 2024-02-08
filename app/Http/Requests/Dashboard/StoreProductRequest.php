@@ -15,9 +15,10 @@ class StoreProductRequest extends BaseFormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string',
+            'product_name' => 'required|string',
             'price' => 'required|numeric',
             'discount' => 'numeric',
+            // 'discount' => 'numeric|nullable',
             'category' => 'required',
             'qty' => 'required|numeric',
             'description' => 'required'

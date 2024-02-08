@@ -52,14 +52,25 @@ class AuthController extends Controller
 
     public function store(StoreAuthRequest $request)
     {
-        $request->validated();
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
+        $validated = $request->validated();
+
+        $userId = "#" . date('Ymd');
+        $validated['user_id'] = $userId;
+        $validated['password'] = Hash::make($request->password);
+
+        $user = User::create($validated);
         Auth::login($user);
 
         return redirect('/')->with(['message' => 'Register Successfully and Loged in']);
+    }
+
+    public function logout(Request $request)
+    {
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/')->with('message', 'You have been logged out!');
     }
 }

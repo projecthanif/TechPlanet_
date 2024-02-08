@@ -1,9 +1,9 @@
 @props(['user'])
 <tr>
-    <td>0</td>
+    <td>{{ $user->user_id }}</td>
     <td>{{ $user->created_at }}</td>
     <td>{{ $user->name }}</td>
-    <td>{{ $user->user_type }}</td>
+    <td>{{ $user->role }}</td>
     <td>
         <div class="dropdown">
             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

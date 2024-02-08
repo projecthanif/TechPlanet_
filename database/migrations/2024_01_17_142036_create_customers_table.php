@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->constrained();
-            $table->string("customer_id")->constrained();
-            $table->string('country');
+            $table->string('customer_id');
+            $table->string('full_name');
+            $table->string('email')->unique();
+            $table->string('phone_number')->nullable();
+            $table->string('status')->default('active'); //options:- active, suspenede, deleted
             $table->timestamps();
         });
     }

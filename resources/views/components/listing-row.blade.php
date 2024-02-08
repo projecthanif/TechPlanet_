@@ -8,7 +8,7 @@
     <td class="d-flex align-items-center">
         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
             class="avatar avatar-xs pull-up list-unstyled" title="{{ $product['name'] }}">
-            <img src="/storage/{{ $product['image_path'] }}" alt="Avatar" class="rounded" />
+            <img src="/storage/{{ $product['image_url'] }}" alt="Avatar" class="rounded" />
         </li>
         <strong class="mx-3">{{ $product['name'] }}</strong>
     </td>

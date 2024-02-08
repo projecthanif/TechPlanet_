@@ -42,9 +42,9 @@
             </div>
         </article>
     </main>
-    {{-- {{Footer}} --}}
+    {{-- Footer --}}
     <x-footer />
-    {{-- {{Footer End}} --}}
+    {{-- Footer End --}}
     <script src="{{ asset('/front/assets/js/app.js') }}"></script>
 </body>
 

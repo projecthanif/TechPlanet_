@@ -12,6 +12,6 @@ class BaseFormRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return (Auth::check() && auth()->user()->user_type == 'admin');
+        return (Auth::check() && auth()->user()->role == 'admin');
     }
 }

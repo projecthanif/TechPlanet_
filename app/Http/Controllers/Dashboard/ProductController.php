@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Dashboard\StoreProductRequest;
 use App\Http\Requests\Dashboard\UpdateProductRequest;
 use App\Policies\BasePolicy;
+use Database\Seeders\ProductSeeder;
+use DateTime;
 
 class ProductController extends Controller
 {
@@ -17,7 +19,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return BasePolicy::viewAny(view('/dashboard/product-lists', [
+        return BasePolicy::viewAny(view('dashboard.product-lists', [
             'products' => Product::all(),
             'nav' => 'product',
             'list' => 'list',
@@ -29,7 +31,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('/dashboard/product-create', [
+        return view('dashboard.product-create', [
             'categories' => Category::all(),
             'nav' => 'product',
             'list' => 'add' //change to create
@@ -43,11 +45,12 @@ class ProductController extends Controller
     {
         $validated = $request->validated();
 
-        if ($request->hasFile('image')) {
-            $validated['image_path'] = $request->file('image')->store('productImage', 'public');
-        }
 
-        $validated['product_id'] = uuid_create();
+        if ($request->hasFile('image')) {
+            $validated['image_url'] = $request->file('image')->store('productImage', 'public');
+        }
+        $date =  "P" . date('Ymd');
+        $validated['product_id'] = $date;
 
         Product::create($validated);
 

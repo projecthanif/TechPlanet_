@@ -23,7 +23,7 @@
                             <!-- Notifications -->
                             <div class="card-body">
                                 <h4>Product information</h4>
-                                <form action="" id="formAccountSettings" method="POST"
+                                <form action="/product/create" id="formAccountSettings" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
                                     @method('POST')
@@ -40,15 +40,17 @@
                                         </div>
                                         <div class="mb-3 col-md-8">
                                             <label for="" class="form-label">Product Name</label>
-                                            <input class="form-control" type="text" id="firstName" name="name"
-                                                placeholder="Product title" autofocus />
+                                            <input class="form-control" type="text" id="firstName"
+                                                name="product_name" placeholder="Product title"
+                                                value="{{ old('product_name') }}" autofocus />
                                         </div>
                                         @error('name')
                                             <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                         <div class="mb-3 col-md-6">
                                             <label for="lastName" class="form-label">Pricing</label>
-                                            <input class="form-control" type="number" name="price" id="price" />
+                                            <input class="form-control" type="number" name="price" id="price"
+                                                value="{{ old('price') }}" />
                                         </div>
                                         @error('price')
                                             <p class="text-danger">{{ $message }}</p>
@@ -56,7 +58,7 @@
                                         <div class="mb-3 col-md-6">
                                             <label for="discount" class="form-label">Discount</label>
                                             <input class="form-control" type="number" id="discount" name="discount"
-                                                placeholder="Discount" />
+                                                placeholder="Discount" value="{{ old('discount') }}" />
                                         </div>
                                         @error('discount')
                                             <p class="text-danger">{{ $message }}</p>
@@ -75,9 +77,9 @@
                                             <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                         <div class="mb-3 col-md-6">
-                                            <label for="discount" class="form-label">Quantity</label>
-                                            <input class="form-control" type="number" id="discount" name="qty"
-                                                placeholder="Quantity" />
+                                            <label for="qty" class="form-label">Quantity</label>
+                                            <input class="form-control" type="number" id="qty" name="qty"
+                                                placeholder="Quantity" value="{{ old('qty') }}" />
                                         </div>
                                         @error('category')
                                             <p class="text-danger">{{ $message }}</p>
@@ -85,7 +87,8 @@
                                     </div>
                                     <div>
                                         <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                                        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                        <textarea name="description" class="form-control" value="{{ old('description') }}" id="exampleFormControlTextarea1"
+                                            rows="5"></textarea>
                                     </div>
                                     @error('description')
                                         <p class="text-danger">{{ $message }}</p>

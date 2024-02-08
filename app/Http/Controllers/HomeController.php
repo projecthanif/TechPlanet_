@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Auth\Events\Logout;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,6 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('/frontend/index', [
             'products' => Product::take(8)->get(),
             'nav' => 'home'

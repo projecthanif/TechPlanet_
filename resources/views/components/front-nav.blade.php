@@ -26,7 +26,7 @@
                 <button class="navbar-btn">Login</button>
             </a>
         @endif
-        <a href="/login" class="link-s">
+        <a href="#" class="link-s">
             <i class="fa fa-search"></i>
         </a>
         <a href="/cart" class="link-s">

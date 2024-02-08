@@ -14,10 +14,14 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->uuid();
+            $table->uuid('tracking_id');
             $table->string("product_id")->constrained();
             $table->string("customer_id")->constrained();
-            $table->string("payment_status")->default(false);
+            $table->string('shipping_address');
+            $table->integer('total_amount');
+            $table->string("order_status")->default('pending'); //either pending. delivered, cancelled, processing, shipped
             $table->string("method")->default('card');
+            $table->string('coupon_code')->nullable();
             $table->timestamps();
         });
     }

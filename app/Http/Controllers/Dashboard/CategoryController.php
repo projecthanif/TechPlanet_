@@ -11,23 +11,15 @@ use App\Policies\BasePolicy;
 class CategoryController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Show the form for creating a new resource.
      */
-    public function index()
+    public function create()
     {
         return BasePolicy::viewAny(view('dashboard.product-category', [
             'categories' => Category::all(),
             'nav' => 'product',
             'list' => 'clist'
         ]));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
     }
 
     /**
