@@ -83,7 +83,7 @@
                     voluptates sit. Vitae officiis dolor atque in, repellendus ex quam
                     assumenda tempora sapiente?
                 </p>
-                <form action="/shop/{{ $product->id }}" method="post">
+                <form action="/shop/{{ $product->id }}" method="post" id="subForm">
                     @csrf
                     @method('post')
                     <button type="submit" class="dp-btn">Add to cart</button>
@@ -235,6 +235,7 @@
     <x-footer />
     {{-- Footer End}} --}}
     <script src="{{ asset('/front/assets/js/tabs.js') }}"></script>
+    <script src="{{ asset('/front/assets/js/ajax.js') }}"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
     <div class="card-foot">
         <h4 class="card-name">{{ $product['name'] }}</h4>
         <h5 class="card-price">{{ $product['price'] }}</h5>
-        <form action="/shop/{{ $product->id }}" method="post">
+        <form action="/shop/{{ $product->id }}" method="post" id="subForm">
             @csrf
             @method('post')
             <a href="#" class="btn-links">

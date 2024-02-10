@@ -69,7 +69,8 @@
     <x-footer />
     {{-- Footer Ends --}}
 
-    <script src="assets/js/app.js"></script>
+    <script src="{{ asset('/front/assets/js/app.js') }}"></script>
+    <script src="{{ asset('/front/assets/js/ajax.js') }}"></script>
     <script>
         const priceRangeEl = document.querySelector(
             "input[type=range]#price-range"

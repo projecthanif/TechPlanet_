@@ -34,6 +34,7 @@ class Shopcontroller extends Controller
         if (!Auth::check()) {
             return redirect('/login');
         }
+        // dd($request);
 
         $product = Product::find($product_id);
 
