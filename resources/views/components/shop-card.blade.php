@@ -2,7 +2,7 @@
 <div class="card-sm-2">
     <a href="/shop/{{ $product['id'] }}">
         <div class="card-body">
-            <img src="/storage/{{ $product['image_url'] }}" alt="" class="card-body-img" />
+            <img src="{{ asset('/storage/' . $product['image_url']) }}" alt="" class="card-body-img" />
         </div>
     </a>
     <div class="card-foot">

@@ -27,7 +27,7 @@ form.addEventListener("submit", function (event) {
     xhr.onload = function () {
         if (xhr.status === 200) {
 
-            body.appendChild(div);
+            body.appendChild(div) ;
             alert('add to cart');
 
         }
