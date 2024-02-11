@@ -1,0 +1,36 @@
+# fly.toml app configuration file generated for tech-mysql on 2024-02-11T11:01:47+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'tech-mysql'
+primary_region = 'ams'
+
+[build]
+  image = 'mysql:8'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
+
+# Add the following sections
+[processes]
+  app = """--datadir /data/mysql \
+    --default-authentication-plugin mysql_native_password"""
+
+[mounts]
+  source = "mysqldata"
+  destination = "/data"
+
+[env]
+  MYSQL_DATABASE = "techpdb"
+  MYSQL_USER = "projecthanif"

@@ -9,12 +9,6 @@ function navToggle() {
         navBar.className = 'showNav';
         font.className = 'fa fa-plus fa-1x';
     });
-
-    // font.addEventListener('click', () => {
-    //     navBar.className = 'navbar';
-    //     font.className = 'fa fa-bars fa-1x';
-    // });
-
 }
 
 navToggle();
