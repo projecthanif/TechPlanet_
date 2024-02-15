@@ -22,7 +22,7 @@ class PaymentGateWayController extends Controller
             "currency" => "NGN",
             "orderID" => auth()->user()->id,
         );
-
+        // dd(paystack()->getAuthorizationUrl($data)->redirectNow());
         try {
             return paystack()->getAuthorizationUrl($data)->redirectNow();
         } catch (\Exception $e) {
