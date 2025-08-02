@@ -17,7 +17,7 @@ WORKDIR /var/www
 COPY . .
 
 # Copy pre-configured .env for SQLite
-COPY .env.docker .env
+COPY .env.example .env
 
 # Install PHP dependencies
 RUN composer install --optimize-autoloader --no-dev \
